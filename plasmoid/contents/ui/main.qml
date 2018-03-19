@@ -41,7 +41,17 @@ PlasmaComponents.ToolButton {
         property variant getWidth
         property variant getHeight
         property variant getY
+        property alias plcLmodel: placesListModel
         property alias rDrawer: rootDrawer
+        
+        ListModel {
+            id: placesListModel
+            
+            onCountChanged: {
+                console.log(placesListModel.count)
+            }
+        }
+
         
             Timer {
                 id: timer
@@ -73,12 +83,12 @@ Drawer {
     y: getY
     //edge: Qt.LeftEdge
     dragMargin: 0
-    z: 1000
+    z: 1
     
     MainPage{
         id: mainPageComponent
         anchors.fill: parent
-        z: 1000
+        z: 1
         }
     }
 }

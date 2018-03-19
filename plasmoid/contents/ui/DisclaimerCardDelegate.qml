@@ -130,8 +130,9 @@ Item {
                 id: mcmenuItem
                 width: dwrpaddedwidth
                 height: removeCardRectbtn.height + disableCardRectbtn.height 
-                edge: Qt.TopEdge
+                y: getY
                 dragMargin: 0
+                z: 30
 
                 Rectangle {
                     id: menuRectItem

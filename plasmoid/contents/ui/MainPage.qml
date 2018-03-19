@@ -35,10 +35,11 @@ import QtGraphicalEffects 1.0
 Item {
     id: main
     anchors.fill: parent
-    z: 999
+    z: 2
 
     Component.onCompleted: {
         mycroftStatusCheckSocket.active = true
+        detectInstallType();
         refreshAllSkills();
     }
 
@@ -62,7 +63,6 @@ Item {
     property var dataContent
     property alias autoCompModel: completionItems
     property alias textInput: qinput
-    property alias plcLmodel: placesListModel
     property alias dashLmodel: dashListModel
     property alias recipeLmodel: recipesListModel
     property alias recipeReadLmodel: recipeReadListModel
@@ -75,11 +75,12 @@ Item {
     property var weatherMetric: "metric"
 
     Connections {
-    target: plasmoid
-    onExpandedChanged: {
-        if (plasmoid.expanded) {
+    target: rootDrawer
+    onPositionChanged: {
+        if (rootDrawer.position == 1) {
             checkDashStatus()
-        }
+            console.log("rootDrawerOpened" + rootDrawer.position)
+      }
     }
   }
 
@@ -88,19 +89,19 @@ Item {
         ignoreUnknownSignals: true
 
         onSendShowMycroft: {
-            plasmoid.expanded = !plasmoid.expanded
+            rootDrawer.open()
             tabBar.currentTab = mycroftTab
         }
         onSendShowSkills: {
             tabBar.currentTab = mycroftSkillsTab
-            if(plasmoid.expanded = !plasmoid.expanded){
-                plasmoid.expanded
+            if(rootDrawer.position == 0){
+                rootDrawer.open()
             }
         }
         onInstallList: {
             tabBar.currentTab = mycroftMSMinstTab
-            if(plasmoid.expanded = !plasmoid.expanded){
-                plasmoid.expanded
+            if(rootDrawer.position == 0){
+                rootDrawer.open()
             }
         }
     }
@@ -195,13 +196,14 @@ Item {
         var locallong = JSON.parse(metadata.locallong);
         var hereappid = metadata.appid
         var hereappcode = metadata.appcode;
+        console.log(hereappcode)
         convoLmodel.clear()
-        placesListModel.clear()
+        plcLmodel.clear()
         for (var i = 0; i < filteredData.results.items.length; i++){
             var itemsInPlaces = JSON.stringify(filteredData.results.items[i])
             var fltritemsinPlc = JSON.parse(itemsInPlaces)
             var fltrtags = getTags(filteredData.results.items[i].tags)
-            placesListModel.insert(i, {placeposition: JSON.stringify(fltritemsinPlc.position), placetitle: JSON.stringify(fltritemsinPlc.title), placedistance: JSON.stringify(fltritemsinPlc.distance), placeloc: JSON.stringify(fltritemsinPlc.vicinity), placetags: fltrtags, placelocallat: locallat, placelocallong: locallong, placeappid: hereappid, placeappcode: hereappcode})
+            plcLmodel.insert(i, {placeposition: JSON.stringify(fltritemsinPlc.position), placetitle: JSON.stringify(fltritemsinPlc.title), placedistance: JSON.stringify(fltritemsinPlc.distance), placeloc: JSON.stringify(fltritemsinPlc.vicinity), placetags: fltrtags, placelocallat: locallat, placelocallong: locallong, placeappid: hereappid, placeappcode: hereappcode})
         }
         convoLmodel.append({"itemType": "PlacesType", "InputQuery": ""});
     }
@@ -479,11 +481,7 @@ PlasmaCore.DataSource {
         }
 
 ListModel {
-      id: placesListModel
-    }
-
-ListModel {
-      id: dashLmodel
+         id: dashListModel
     }
 
 ListModel{
@@ -674,12 +672,15 @@ PlasmaComponents.TabBar {
                         convoLmodel.clear()
                         suggst.visible = true;
                         socket.active = false;
+                        showDash("setVisible")
                     }
 
                     if (mycroftstartservicebutton.checked === true) {
                         disclaimbox.visible = false;
                         PlasmaLa.LaunchApp.runCommand("bash", coreinstallstartpath);
+                        if(dashswitch.checked == "false"){
                         convoLmodel.clear()
+                        }
                         suggst.visible = true;
                         delay(15000, function() {
                         socket.active = true;
@@ -794,7 +795,7 @@ Rectangle {
                 filterBalooObj(dataContent)
             }
 
-            if (msgType === "speak" && !plasmoid.expanded && notificationswitch.checked == true) {
+            if (msgType === "speak" && rootDrawer.position == 0 && notificationswitch.checked == true) {
                 var post = somestring.data.utterance;
                 var title = "Mycroft's Reply:"
                 var notiftext = " "+ post;
@@ -864,7 +865,7 @@ Rectangle {
 
         Disclaimer{
             id: disclaimbox
-            visible: true
+            visible: false
             }
 
         ListModel{
@@ -955,12 +956,38 @@ Rectangle {
     anchors.leftMargin: units.gridUnit * 0.25
     anchors.right: root.right
     anchors.bottom: root.bottom
+    
+        
+        PlasmaComponents.TabBar {
+        id: settingstabBar
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent. right
+        height: units.gridUnit * 2
+        tabPosition: Qt.TopEdge;
+        
+        PlasmaComponents.TabButton {
+                id: generalSettingsTab
+                text: "General"
+        }
+        
+        PlasmaComponents.TabButton {
+            id: dashSettingsTab
+            text: "Dash"
+            }
+        }
 
-    Item {
+
+Item {
                     id: settingscontent
                     Layout.fillWidth: true;
                     Layout.fillHeight: true;
-                    anchors.fill: parent;
+                    anchors.top: settingstabBar.bottom
+                    anchors.topMargin: units.gridUnit * 0.50
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    visible: settingstabBar.currentTab == generalSettingsTab;
 
     Flickable {
         id: settingFlick
@@ -968,128 +995,126 @@ Rectangle {
         contentWidth: mycroftSettingsColumn.width
         contentHeight: units.gridUnit * 22
         clip: true;
-
+        
                 PlasmaComponents.Label {
                     id: settingsTabUnits
                     anchors.top: parent.top;
                     anchors.topMargin: 5
                     text: i18n("<i>Your Mycroft Core Installation Path</i>")
                     }
-
+                    
                 PlasmaComponents.ButtonColumn {
                     id: radiobuttonColoumn
                     anchors.top: settingsTabUnits.bottom
                     anchors.topMargin: 5
-
+                    
                     PlasmaComponents.RadioButton {
                         id: settingsTabUnitsOpZero
                         exclusiveGroup: installPathGroup
                         text: i18n("Default Path")
                         checked: true
-
+                        
                         onCheckedChanged: {
-
+                            locationUserSelected = true
                             if (settingsTabUnitsOpZero.checked === true && coreinstallstartpath === packagemcorestartcmd) {
                                 coreinstallstartpath = defaultmcorestartpath;
                             }
                             else if (settingsTabUnitsOpZero.checked === true && coreinstallstartpath === customlocstartpath) {
-                                coreinstallstartpath = defaultmcorestartpath;
+                                coreinstallstartpath = defaultmcorestartpath;   
                             }
-
+                            
                             if (settingsTabUnitsOpZero.checked === true && coreinstallstoppath === packagemcorestopcmd) {
                                 coreinstallstoppath = defaultmcorestoppath;
                             }
-
+                            
                             else if (settingsTabUnitsOpZero.checked === true && coreinstallstoppath === customlocstoppath) {
-                                coreinstallstoppath = defaultmcorestoppath;
+                                coreinstallstoppath = defaultmcorestoppath;   
                             }
                         }
                     }
-
+                    
                     PlasmaComponents.RadioButton {
                         id: settingsTabUnitsOpOne
                         exclusiveGroup: installPathGroup
                         text: i18n("Installed Using Mycroft Package")
                         checked: false
-
+                        
                         onCheckedChanged: {
-
+                            
                             if (settingsTabUnitsOpOne.checked === true && coreinstallstartpath === defaultmcorestartpath) {
                                 coreinstallstartpath = packagemcorestartcmd;
                             }
                             else if (settingsTabUnitsOpOne.checked === true && coreinstallstartpath === customlocstartpath) {
-                                coreinstallstartpath = packagemcorestartcmd;
+                                coreinstallstartpath = packagemcorestartcmd;   
                             }
-
+                            
                             if (settingsTabUnitsOpOne.checked === true && coreinstallstoppath === defaultmcorestoppath) {
                                 coreinstallstoppath = packagemcorestopcmd;
                             }
-
+                            
                             else if (settingsTabUnitsOpOne.checked === true && coreinstallstoppath === customlocstoppath) {
-                                coreinstallstoppath = packagemcorestopcmd;
+                                coreinstallstoppath = packagemcorestopcmd;   
                             }
                         }
                     }
-
+                    
                     PlasmaComponents.RadioButton {
                         id: settingsTabUnitsOpTwo
                         exclusiveGroup: installPathGroup
                         text: i18n("Location of Mycroft-Core Directory")
                         checked: false
-
+                        
                         onCheckedChanged: {
-
+                            locationUserSelected = true
                             if (settingsTabUnitsOpTwo.checked === true && coreinstallstartpath === defaultmcorestartpath) {
                                 coreinstallstartpath = customlocstartpath;
                             }
                             else if (settingsTabUnitsOpTwo.checked === true && coreinstallstartpath === packagemcorestartcmd) {
-                                coreinstallstartpath = customlocstartpath;
+                                coreinstallstartpath = customlocstartpath;   
                             }
-
+                            
                             if (settingsTabUnitsOpTwo.checked === true && coreinstallstoppath === defaultmcorestoppath) {
                                 coreinstallstoppath = customlocstoppath;
                             }
-
+                            
                             else if (settingsTabUnitsOpTwo.checked === true && coreinstallstoppath === packagemcorestopcmd) {
-                                coreinstallstoppath = customlocstoppath;
+                                coreinstallstoppath = customlocstoppath;   
                             }
-
+                            
                         }
-                    }
+                    } 
                         }
-
+                    
                     PlasmaComponents.TextField {
                         id: settingsTabUnitsOpThree
                         width: settingscontent.width / 1.1
                         anchors.top: radiobuttonColoumn.bottom
                         anchors.topMargin: 10
                         placeholderText: i18n("<custom location>/mycroft-core/")
-                        text: ""
-
+                        
                         onTextChanged: {
                             var cstloc = settingsTabUnitsOpThree.text
                             customloc = cstloc
-
                         }
                     }
-
+                    
                 PlasmaComponents.Button {
                     id: acceptcustomPath
                     anchors.left: settingsTabUnitsOpThree.right
                     anchors.verticalCenter: settingsTabUnitsOpThree.verticalCenter
                     anchors.right: parent.right
                     iconSource: "checkbox"
-
+                    
                     onClicked: {
                         var cstlocl = customloc
-                        var ctstart = cstlocl + "start-mycroft.sh all"
-                        var ctstop = cstlocl + "stop-mycroft.sh"
+                        var ctstart = cstlocl + "start-mycroft.sh all" 
+                        var ctstop = cstlocl + "stop-mycroft.sh" 
                             startsrvcustom.text = ctstart
                             stopsrvcustom.text = ctstop
-                            console.log(startsrvcustom.text)
+                            console.log(startsrvcustom.text)                    
                         }
-                    }
-
+                    } 
+                    
                 PlasmaComponents.TextField {
                         id: settingsTabUnitsWSpath
                         width: settingscontent.width / 1.1
@@ -1098,20 +1123,20 @@ Rectangle {
                         placeholderText: i18n("ws://0.0.0.0:8181/core")
                         text: i18n("ws://0.0.0.0:8181/core")
                     }
-
+                    
                 PlasmaComponents.Button {
                     id: acceptcustomWSPath
                     anchors.left: settingsTabUnitsWSpath.right
                     anchors.verticalCenter: settingsTabUnitsWSpath.verticalCenter
                     anchors.right: parent.right
                     iconSource: "checkbox"
-
-                    onClicked: {
+                    
+                    onClicked: { 
                         innerset.wsurl = settingsTabUnitsWSpath.text
                         }
                     }
-
-
+                    
+                                
                 PlasmaComponents.TextField {
                         id: settingsTabUnitsIRCmd
                         width: settingscontent.width / 1.1
@@ -1120,16 +1145,16 @@ Rectangle {
                         placeholderText: i18n("Your Custom Image Recognition Skill Voc Keywords")
                         text: i18n("search image url")
                     }
-
+                    
                 PlasmaComponents.Button {
                     id: acceptcustomIRCmd
                     anchors.left: settingsTabUnitsIRCmd.right
                     anchors.verticalCenter: settingsTabUnitsIRCmd.verticalCenter
                     anchors.right: parent.right
                     iconSource: "checkbox"
-                }
-
-
+                }    
+                    
+                    
                 PlasmaComponents.Switch {
                         id: notificationswitch
                         anchors.top: settingsTabUnitsIRCmd.bottom
@@ -1137,23 +1162,153 @@ Rectangle {
                         text: i18n("Enable Notifications")
                         checked: true
                     }
-
-
+                    
+                    
+                PlasmaComponents.Switch {
+                        id: wolframfallbackswitch
+                        anchors.top: notificationswitch.bottom
+                        anchors.topMargin: 10
+                        text: i18n("Enable Fallback To Wolfram Alpha Web-Search")
+                        checked: true
+                    }
+                
+                PlasmaComponents.TextField {
+                        id: wolframapikeyfld
+                        width: parent.width
+                        anchors.top: wolframfallbackswitch.bottom
+                        anchors.topMargin: 10
+                        text: i18n("RJVUY3-T6YLWQVXRR")
+                }
+                
                 PlasmaExtras.Paragraph {
                         id: settingsTabTF2
-                        anchors.top: notificationswitch.bottom
+                        anchors.top: wolframapikeyfld.bottom
                         anchors.topMargin: 15
                         text: i18n("<i>Please Note: Default path is set to /home/$USER/mycroft-core/. Change the above settings to match your installation</i>")
                     }
-
+                    
                 PlasmaComponents.Label {
                     id: startsrvcustom
                     visible: false
                 }
-
+                
                 PlasmaComponents.Label {
                     id: stopsrvcustom
                     visible: false
+                }   
+            }
+        }
+        
+    Item {
+        id: dashsettingscontent
+        Layout.fillWidth: true;
+        Layout.fillHeight: true;
+        anchors.top: settingstabBar.bottom
+        anchors.topMargin: units.gridUnit * 0.50
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        visible: settingstabBar.currentTab == dashSettingsTab;
+
+    Flickable {
+        id: dashsettingFlick
+        anchors.fill: parent;
+        contentWidth: mycroftSettingsColumn.width
+        contentHeight: units.gridUnit * 22
+        clip: true;
+
+        Column {
+        spacing: 6
+        
+        PlasmaComponents.Switch {
+            id: dashswitch
+            text: i18n("Enable / Disable Dashboard")
+            checked: true
+            
+            onCheckedChanged:   {
+                console.log(dashswitch.checked)
+                if(dashswitch.checked){
+                    showDash("setVisible")
+                }
+                else if(!dashswitch.checked){
+                    convoLmodel.clear()
+                }
+            }
+            
+        }
+
+        PlasmaComponents.Label {
+                id: dashSettingsLabel1
+                text: i18n("Card Settings:")
+                font.bold: true;
+            }
+            
+        PlasmaComponents.Switch {
+            id: disclaimercardswitch
+            text: i18n("Enable / Disable Disclaimer Card")
+            checked: true
+        }
+            
+        PlasmaComponents.Switch {
+            id: newscardswitch
+            text: i18n("Enable / Disable News Card")
+            checked: true
+        }
+                    
+        Row {
+        spacing: 2
+           PlasmaComponents.Label { 
+                id: newsApiKeyLabelFld
+                text: "NewsApi App_Key:"
+            }
+            PlasmaComponents.TextField{
+                id: newsApiKeyTextFld
+                width: units.gridUnit * 12
+                text: "a1091945307b434493258f3dd6f36698"
+            }
+        }
+                    
+        PlasmaComponents.Switch {
+            id: weathercardswitch
+            text: i18n("Enable / Disable Weather Card")
+            checked: true
+        }
+        
+        Row {
+        spacing: 2
+           PlasmaComponents.Label { 
+                id: owmApiKeyLabelFld
+                text: "Open Weather Map App_ID:"
+                }
+            PlasmaComponents.TextField{
+                id: owmApiKeyTextFld
+                width: units.gridUnit * 12
+                text: "7af5277aee7a659fc98322c4517d3df7"
+                }
+        }
+            
+        Row{
+        id: weatherCardMetricsRowList
+        spacing: 2
+        
+           PlasmaComponents.Button { 
+                id: owmApiKeyMetricCel
+                text: i18n("Celcius")
+                onClicked: {
+                    weatherMetric = "metric"
+                    updateCardData()
+                }
+            }
+            PlasmaComponents.Button{
+                id: owmApiKeyMetricFar
+                text: i18n("Fahrenheit")
+                onClicked: {
+                    weatherMetric = "imperial"
+                    updateCardData()
+                }
+            }
+        }
+                    
                 }
             }
         }
@@ -1461,8 +1616,18 @@ Item {
             property alias customrecog: settingsTabUnitsIRCmd.text
             property alias customsetuppath: settingsTabUnitsOpThree.text
             property alias notifybool: notificationswitch.checked
+            property alias wolffallbackbool: wolframfallbackswitch.checked
+            property alias wolframKey: wolframapikeyfld.text
             property alias radiobt1: settingsTabUnitsOpOne.checked
             property alias radiobt2: settingsTabUnitsOpTwo.checked
             property alias radiobt3: settingsTabUnitsOpZero.checked
+            property alias dashboardSetting: dashswitch.checked
+            property alias disclaimerCardSetting: disclaimercardswitch.checked
+            property alias newsCardSetting: newscardswitch.checked
+            property alias newsCardAPIKey: newsApiKeyLabelFld.text
+            property alias weatherCardSetting: weathercardswitch.checked
+            property alias weatherCardAPIKey: owmApiKeyLabelFld.text
+            property alias weatherMetricC: owmApiKeyMetricCel.checked
+            property alias weatherMetricF: owmApiKeyMetricFar.checked
     }
 }
