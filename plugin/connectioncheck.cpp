@@ -16,26 +16,26 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "msmapp.h"
+#include "connectioncheck.h"
 
-#include <QProcess>
-#include <QDir>
+#include <QtNetwork>
 
-MsmApp::MsmApp(QObject *parent) :
-    QObject(parent),
-    m_process(new QProcess(this))
+ConnectionCheck::ConnectionCheck(QObject *parent)
+    : QObject(parent)
 {
 }
 
-void MsmApp::msmapp(const QString &program)
-{
-    m_process->startDetached(program);
-}
-
-QString MsmApp::skillsPath()
-{
-    QString path = QDir::homePath()+"/.mycroft/skills";
-    QDir dir(path);
-    if (dir.exists()) return path;
-    return QStringLiteral("/opt/mycroft/skills");
+bool ConnectionCheck::checkConnection(){
+    QNetworkAccessManager nam;
+    QNetworkRequest req(QUrl("http://www.example.com/"));
+    QNetworkReply *reply = nam.get(req);
+    QEventLoop loop;
+    connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
+    loop.exec();
+    if(reply->bytesAvailable()) {
+        return true;
+    }
+    else { 
+        return false;
+    }
 }

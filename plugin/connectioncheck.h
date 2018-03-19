@@ -1,4 +1,4 @@
-/*
+ /*
  *   Copyright (C) 2016 by Aditya Mehra <aix.m@outlook.com>                      *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,26 +16,23 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "msmapp.h"
+#ifndef CONNECTIONCHECK_H
+#define CONNECTIONCHECK_H
 
-#include <QProcess>
-#include <QDir>
+#include <QObject>
+#include <QStringList>
+#include <QtNetwork>
 
-MsmApp::MsmApp(QObject *parent) :
-    QObject(parent),
-    m_process(new QProcess(this))
+class ConnectionCheck : public QObject
 {
-}
+    Q_OBJECT
 
-void MsmApp::msmapp(const QString &program)
-{
-    m_process->startDetached(program);
-}
+public:
+    explicit ConnectionCheck(QObject *parent = Q_NULLPTR);
 
-QString MsmApp::skillsPath()
-{
-    QString path = QDir::homePath()+"/.mycroft/skills";
-    QDir dir(path);
-    if (dir.exists()) return path;
-    return QStringLiteral("/opt/mycroft/skills");
-}
+public Q_SLOTS:
+    bool checkConnection();
+    
+};
+
+#endif // CONNECTIONCHECK_H
