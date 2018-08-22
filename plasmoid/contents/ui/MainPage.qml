@@ -481,7 +481,7 @@ Item {
                     disclaimbox.visible = false
                 }
                 else {
-                    disclaimbox.visible = true
+                    disclaimbox.visible = false
                 }
             }
         }
@@ -913,7 +913,7 @@ Rectangle {
         
         Disclaimer{
             id: disclaimbox
-            visible: true
+            visible: false
             }
         
         ListModel{

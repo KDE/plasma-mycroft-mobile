@@ -85,6 +85,7 @@ Rectangle {
             text: i18n("Ask Another")
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
+            font.pixelSize: theme.defaultFont.pointSize - 4
         }
     }
     
@@ -225,6 +226,7 @@ Rectangle {
             text: i18n("Clear")
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
+            font.pixelSize: theme.defaultFont.pointSize - 4
             }
         }
 }
