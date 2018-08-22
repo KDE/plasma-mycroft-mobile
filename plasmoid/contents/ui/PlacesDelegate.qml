@@ -1,3 +1,22 @@
+/* Copyright 2016 Aditya Mehra <aix.m@outlook.com>                            
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) version 3, or any
+    later version accepted by the membership of KDE e.V. (or its
+    successor approved by the membership of KDE e.V.), which shall
+    act as a proxy defined in Section 6 of version 3 of the license.
+    
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 import QtQuick 2.9
 import QtQml.Models 2.2
 import QtQuick.Controls 2.2
@@ -5,14 +24,25 @@ import QtQuick.Layouts 1.3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtGraphicalEffects 1.0
 
 Rectangle {
         id: nearbyDelegateItm
-        height: units.gridUnit * 5
-        color: theme.backgroundColor
+        height: units.gridUnit * 6
         anchors.left: parent.left
         anchors.right: parent.right
-        width: placesmodelview.view.width
+        width: cbwidth
+        border.color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.2)
+        color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.2) 
+        layer.enabled: true
+        layer.effect: DropShadow {
+            horizontalOffset: 0
+            verticalOffset: 1
+            radius: 10
+            samples: 32
+            spread: 0.1
+            color: Qt.rgba(0, 0, 0, 0.3)
+        }
         
         function getRouteInformation(llat, llong, dlat, dlong, oappid, oappcode){
             var routedoc = new XMLHttpRequest()
@@ -35,66 +65,106 @@ Rectangle {
                 }
             }
 
-        ColumnLayout {
+        Item {
             id: contentdlgtitem
             anchors.fill: parent
 
-            RowLayout {
+            Item {
             id: skillTopRowLayout
-            spacing: 5
-            anchors.fill: parent
-
-            PlasmaComponents.Label {
-                wrapMode: Text.WordWrap;
-                width: parent.width;
-                text: placedistance + " <i>mtrs</i>"
-                anchors.top: parent.top
-                anchors.right: parent.right
-            }
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right 
+            height: plcname.height + units.gridUnit * 0.25
 
             PlasmaComponents.Label {
                 id: plcname
-                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left
-                anchors.right: parent.right
+                anchors.leftMargin: units.gridUnit * 0.15
                 wrapMode: Text.WordWrap;
                 font.bold: true;
+                font.pointSize: theme.defaultFont.pointSize
+                font.letterSpacing: theme.defaultFont.letterSpacing
+                font.wordSpacing: theme.defaultFont.wordSpacing
+                font.family: theme.defaultFont.family
+                renderType: Text.NativeRendering 
                 text: qsTr(placetitle.replace(/["']/g, ""))
                 }
+            
+            PlasmaComponents.Label {
+                id: plcdistance
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.right: parent.right
+                anchors.rightMargin: units.gridUnit * 0.15
+                wrapMode: Text.WordWrap;
+                font.bold: true;
+                font.pointSize: theme.defaultFont.pointSize
+                font.letterSpacing: theme.defaultFont.letterSpacing
+                font.wordSpacing: theme.defaultFont.wordSpacing
+                font.family: theme.defaultFont.family
+                renderType: Text.NativeRendering 
+                text: "Distance: " + placedistance + " <i>mtrs</i>"
+                }
+            }
                 
             Rectangle {
+                id: placesCrdSeptHeader
                     height: 1
                     anchors {
                         left: parent.left
                         right: parent.right
-                        top: plcname.bottom
+                        top: skillTopRowLayout.bottom
                         topMargin: units.gridUnit * 0.2
                        }
                     color: theme.linkColor
-                   }
+            }
 
             Item {
-            id: plcinner
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-            anchors.right: parent.right
-            anchors.top: plcname.bottom
-            anchors.topMargin: units.gridUnit * 0.6
-            anchors.bottom: tagsplccs.top
+                id: plcinner
+                anchors.top: placesCrdSeptHeader.bottom
+                anchors.topMargin: units.gridUnit * 0.15
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
 
-            PlasmaComponents.Label {
-                wrapMode: Text.WordWrap;
-                width: parent.width;
-                text: "<i>Location:</i> " + placeloc.replace(/["']/g, "")
-               }
+            Item {
+                id: plcinnerdetails
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                height: navbbtn.height
+                
+                Image {
+                    id: placeIconType
+                    anchors.left: parent.left
+                    anchors.leftMargin: units.gridUnit * 0.05
+                    anchors.verticalCenter: parent.verticalCenter
+                    source: placeicon.replace(/["']/g, "")
+                    width: units.gridUnit * 2
+                    height: units.gridUnit * 2
+                }
 
-              Image {
+                PlasmaComponents.Label {
+                    id: placeAddressLabel
+                    anchors.left: placeIconType.right
+                    anchors.leftMargin: units.gridUnit * 0.05
+                    wrapMode: Text.WordWrap;
+                    font.bold: true;
+                    font.pointSize: theme.defaultFont.pointSize
+                    font.letterSpacing: theme.defaultFont.letterSpacing
+                    font.wordSpacing: theme.defaultFont.wordSpacing
+                    font.family: theme.defaultFont.family
+                    renderType: Text.NativeRendering 
+                    text: "Address: " + placeloc.replace(/["']/g, "")
+                }
+
+                Image {
                     id: navbbtn
                     anchors.right: parent.right
                     anchors.margins: units.gridUnit * 0.5
                     source: "../images/up.png"
-                    width: 36
-                    height: 36
+                    width: units.gridUnit * 2
+                    height: units.gridUnit * 2
 
                     MouseArea {
                        anchors.fill: parent
@@ -108,19 +178,41 @@ Rectangle {
                        }
                     }
                 }
-                    }
+            }
 
-            PlasmaComponents.Label {
-                id: tagsplccs
-                anchors.top: plcinner.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
-                wrapMode: Text.WordWrap;
-                width: parent.width;
-                height: units.gridUnit * 2
-                text: placetags
-               }
+            Rectangle {
+                id: placesCrdSeptFooter
+                    height: apiCreds.height
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                       }
+                    color: theme.linkColor
+
+                PlasmaComponents.Label {
+                    id: tagsplccs
+                    anchors.left: parent.left
+                    anchors.leftMargin: units.gridUnit * 0.15
+                    anchors.right: apiCreds.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    wrapMode: Text.WordWrap;
+                    font.pointSize: theme.defaultFont.pointSize - 2
+                    text: placetags
                     }
-                        }
-                            }
+                
+                PlasmaComponents.Label {
+                    id: apiCreds
+                    anchors.right: parent.right
+                    anchors.rightMargin: units.gridUnit * 0.15
+                    anchors.verticalCenter: parent.verticalCenter
+                    wrapMode: Text.WordWrap;
+                    font.bold: true
+                    font.pointSize: theme.defaultFont.pointSize - 2
+                    text: i18n("<i>Powered By: Here.API</i>")
+                    }
+                }
+            }             
+        }
+    }
  
