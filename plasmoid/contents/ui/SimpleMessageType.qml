@@ -1,4 +1,4 @@
-/* Copyright 2016 Aditya Mehra <aix.m@outlook.com>
+/* Copyright 2016 Aditya Mehra <aix.m@outlook.com>                            
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -7,12 +7,12 @@
     later version accepted by the membership of KDE e.V. (or its
     successor approved by the membership of KDE e.V.), which shall
     act as a proxy defined in Section 6 of version 3 of the license.
-
+    
     This library is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
     Lesser General Public License for more details.
-
+    
     You should have received a copy of the GNU Lesser General Public
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -22,7 +22,6 @@ import QtQml.Models 2.2
 import QtQuick.Controls 2.2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import QtGraphicalEffects 1.0
 
 Column {
                     spacing: 6
@@ -30,37 +29,32 @@ Column {
 
                     readonly property bool sentByMe: model.recipient !== "User"
                     property alias mssg: messageText.text
-
+                        
                     Row {
                         id: messageRow
                         spacing: 6
-
+                        
                     Image {
                         id: repImg
                         width: units.gridUnit * 2
                         height: units.gridUnit * 2
                         source: "../images/mycroftsmaller2.png"
-
-                        ColorOverlay {
-                          anchors.fill: repImg
-                          source: repImg
-                          color: theme.linkColor
-                      }
                     }
-
+                    
                     Rectangle {
                         id: messageRect
                         width: cbwidth - units.gridUnit * 2
                         radius: 2
                         height: messageText.implicitHeight + 24
                         color: Qt.lighter(theme.backgroundColor, 1.2)
-
+                        
                     PlasmaComponents.Label {
                         id: messageText
                         text: model.InputQuery
                         anchors.fill: parent
                         anchors.margins: 12
                         wrapMode: Label.Wrap
+                        
                         }
                             }
                                 }

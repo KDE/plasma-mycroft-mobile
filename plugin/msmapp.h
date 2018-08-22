@@ -27,9 +27,7 @@ class MsmApp : public QObject
     Q_OBJECT
 public:
     explicit MsmApp(QObject *parent = 0);
-    Q_INVOKABLE void msmapp(const QString &program);
-
-    Q_INVOKABLE QString skillsPath();
+    Q_INVOKABLE QString msmapp(const QString &program);
 
 private:
     QProcess *m_process;

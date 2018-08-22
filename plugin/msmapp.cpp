@@ -19,23 +19,19 @@
 #include "msmapp.h"
 
 #include <QProcess>
-#include <QDir>
 
-MsmApp::MsmApp(QObject *parent) :
+MsmApp::MsmApp(QObject *parent) : 
     QObject(parent),
     m_process(new QProcess(this))
 {
 }
 
-void MsmApp::msmapp(const QString &program)
+QString MsmApp::msmapp(const QString &program)
 {
-    m_process->startDetached(program);
+    m_process->start(program);
+    m_process->waitForFinished(-1);
+    QByteArray bytes = m_process->readAllStandardOutput();
+    QString output = QString::fromLocal8Bit(bytes);
+    return output;
 }
-
-QString MsmApp::skillsPath()
-{
-    QString path = QDir::homePath()+"/.mycroft/skills";
-    QDir dir(path);
-    if (dir.exists()) return path;
-    return QStringLiteral("/opt/mycroft/skills");
-}
+ 

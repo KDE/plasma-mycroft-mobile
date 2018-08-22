@@ -24,47 +24,21 @@ import QtQuick.Layouts 1.3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-Item {
-    id: dashbdtypebg
+Rectangle {
+    id: booktypebg
+    height: cbheight / 1.8
     width: cbwidth
-    height: cbheight
-    property alias dashlvmodel: dashboardmodelview.model
-    property alias dashlvdelegate: dashboardmodelview.delegate
-      
-    PulleyItemDash {
-        id: dashlistPulley
-        visible: true
-        barColor: theme.linkColor
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: units.gridUnit * 0.10
-        _isVisible: true
-        z: 900
-    }  
-    
+    color: theme.backgroundColor
+        
 ListView {
-     id: dashboardmodelview
-     anchors.top: parent.top
-     anchors.left: parent.left
-     anchors.right: parent.right
-     height: cbheight / 1.05
-     model: dashLmodel
-     spacing: 2
+     id: bookmodelview
+     anchors.fill: parent
+     model: bookLmodel
      focus: false
      interactive: true
      clip: true;
-     delegate: DashboardDelegate{}
-     ScrollBar.vertical: dashscrollBar
-    }
-    
-    PlasmaComponents3.ScrollBar {
-        id: dashscrollBar
-        orientation: Qt.Vertical
-        interactive: true
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
+     delegate: BookDelegate{}
     }
 }
-
+ 

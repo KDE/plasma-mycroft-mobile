@@ -57,21 +57,14 @@ void MycroftDbusAdapterInterface::showSkills()
 {
     // handle method call org.kde.mycroft.showSkills
     emit sendShowSkills("ShowSkills");
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, "ShowSkills"));
+    //QMetaObject::invokeMethod(this, "showSkills");
 }
 
 void MycroftDbusAdapterInterface::showSkillsInstaller()
 {
     // handle method call org.kde.mycroft.showSkillsInstaller
-    emit installList("ShowInstallSkills");
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, "ShowInstallSkills"));
-}
-
-void MycroftDbusAdapterInterface::showRecipeMethod(const QString &recipeName)
-{
-    // handle method call org.kde.mycroft.showRecipeMethod
-    emit recipeMethod(recipeName);
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, recipeName));
+    emit sendShowInstallSkills("ShowInstallSkills");
+    //QMetaObject::invokeMethod(this, "showSkillsInstaller");
 }
 
 Q_INVOKABLE QString MycroftDbusAdapterInterface::getMethod(const QString &method)

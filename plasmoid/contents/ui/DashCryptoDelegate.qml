@@ -28,7 +28,7 @@ import QtGraphicalEffects 1.0
 
 Rectangle {
         id: dashDelegateItm
-        height: skillTopRowLayout.height + dashinner.height + dashItemSrcMeta.height + units.gridUnit * 0.5
+        height: units.gridUnit * 2.5
         width: cbwidth - units.gridUnit * 0.50
         border.width: 1        
         border.color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.2)
@@ -45,7 +45,7 @@ Rectangle {
         
         Item {
             id: contentdlgtitem
-            width: parent.width - units.gridUnit * 0.05
+            width: parent.width
             height: parent.height
             
             Item {
@@ -53,40 +53,22 @@ Rectangle {
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            implicitHeight: dashHeader.implicitHeight + units.gridUnit * 0.5
+            implicitHeight: dashHeader.height
             
             Text {
                 id: dashHeader
                 anchors.left: dashHeaderSeprtr.right
                 anchors.leftMargin: units.gridUnit * 0.25
                 anchors.verticalCenter: parent.verticalCenter
-                width: parent.width - Math.round(contxtnewsitemmenu.width + units.gridUnit * 1.25)
-                wrapMode: Text.Wrap;
-                font.bold: true;
+                wrapMode: Text.Wrap
+                font.bold: true
                 font.pointSize: theme.defaultFont.pointSize
                 font.letterSpacing: theme.defaultFont.letterSpacing
                 font.wordSpacing: theme.defaultFont.wordSpacing
                 font.family: theme.defaultFont.family
                 renderType: Text.NativeRendering 
                 color: PlasmaCore.ColorScope.textColor
-                text: model.contents.newsTitle
-                
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    
-                    onEntered: {
-                        dashHeader.color = theme.linkColor
-                        dashHeader.font.underline = true
-                    }
-                    onExited: {
-                        dashHeader.color = PlasmaCore.ColorScope.textColor
-                        dashHeader.font.underline = false
-                    }
-                    onClicked: {
-                        Qt.openUrlExternally(model.contents.newsURL)
-                    }
-                }
+                text: i18n("Currency: " + model.contents.cryptoType)
             }
             
             PlasmaCore.SvgItem {
@@ -105,7 +87,7 @@ Rectangle {
                     id: dashhdrvertSvg;
                     imagePath: "widgets/line"
                 }
-            }
+            }  
 
             ToolButton {
                 id: contxtnewsitemmenu
@@ -148,115 +130,57 @@ Rectangle {
             Layout.minimumHeight: units.gridUnit * 2
             anchors.top: nwsseprator.bottom
             anchors.topMargin: 1
-            
+        
         Text {
             id: nwsdesc
             wrapMode: Text.Wrap;
-            anchors.right: ctxImgIcon.left
             anchors.left: parent.left
-            anchors.leftMargin: 2
+            width: parent.width / 3
             font.pointSize: theme.defaultFont.pointSize
             font.letterSpacing: theme.defaultFont.letterSpacing
             font.wordSpacing: theme.defaultFont.wordSpacing
             font.family: theme.defaultFont.family
             renderType: Text.NativeRendering 
             color: PlasmaCore.ColorScope.textColor
-            text: model.contents.newsDescription
-            
-            Component.onCompleted: {
-                if (!nwsdesc.text) {
-                    nwsdesc.text = model.contents.newsTitle
-                }
+            text: i18n(model.contents.cryptoSymbol1 + " : " + model.contents.cryptoCurRate1)
             }
-        }
-
-        Image {
-            id: ctxImgIcon
-            anchors.right: parent.right
-            anchors.margins: units.gridUnit * 0.5
-            source: model.contents.newsImgURL
-            width: 64
-            height: parent.height
-            
-            Component.onCompleted: {
-                if (ctxImgIcon.source == "") {
-                        ctxImgIcon.source = "../images/newsicon.png"
-                    }
-                }
-            
-            }
-        }
-       
-        Rectangle {
-                id: nwsseprator2
-                width: parent.width
-                anchors.top: dashinner.bottom
-                anchors.topMargin: 1
-                height: 2
-                color: theme.linkColor
-        }
-       
-         Rectangle {
-             id: dashItemSrcMeta
-             implicitWidth: dashItemSrcName.implicitWidth + units.gridUnit * 1
-             anchors.left: parent.left
-             anchors.leftMargin: units.gridUnit * 0.05
-             anchors.top: nwsseprator2.bottom 
-             anchors.topMargin: 1
-             color: theme.linkColor
-             height: units.gridUnit * 1.25
-
-              Text {
-                  id: dashItemSrcName
-                  wrapMode: Text.Wrap;
-                  anchors.centerIn: parent
-                  font.pointSize: theme.defaultFont.pointSize
-                  font.letterSpacing: theme.defaultFont.letterSpacing
-                  font.wordSpacing: theme.defaultFont.wordSpacing
-                  font.family: theme.defaultFont.family
-                  renderType: Text.NativeRendering 
-                  color: PlasmaCore.ColorScope.textColor
-                  text: model.contents.newsSource
-                  
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    
-                            onEntered: {
-                               dashItemSrcMeta.color = theme.textColor
-                               dashItemSrcName.color = theme.backgroundColor
-                            }
-                            onExited: {
-                               dashItemSrcMeta.color = theme.linkColor
-                               dashItemSrcName.color = theme.textColor
-                            }
-                            onClicked: {
-                                Qt.openUrlExternally("https://" + model.contents.newsSource)
-                            }
-                        }
-                    }
-                }
-                
+        
         Text {
-            id: dashItemPwrBy
-            anchors.top: nwsseprator2.bottom 
-            anchors.topMargin: 1
+            id: nwsdesc2
             wrapMode: Text.Wrap;
-            anchors.right: parent.right
+            anchors.left: nwsdesc.right
+            width: parent.width / 3
+            font.pointSize: theme.defaultFont.pointSize
             font.letterSpacing: theme.defaultFont.letterSpacing
             font.wordSpacing: theme.defaultFont.wordSpacing
             font.family: theme.defaultFont.family
             renderType: Text.NativeRendering 
             color: PlasmaCore.ColorScope.textColor
-            font.pixelSize: 10
-            text: i18n("<i>Powered By: NewsAPI</i>")
+            text: i18n(model.contents.cryptoSymbol2 + " : " + model.contents.cryptoCurRate2)
+            }
+        
+        Text {
+            id: nwsdesc3
+            wrapMode: Text.Wrap;
+            anchors.left: nwsdesc2.right
+            width: parent.width / 3
+            font.pointSize: theme.defaultFont.pointSize
+            font.letterSpacing: theme.defaultFont.letterSpacing
+            font.wordSpacing: theme.defaultFont.wordSpacing
+            font.family: theme.defaultFont.family
+            renderType: Text.NativeRendering 
+            color: PlasmaCore.ColorScope.textColor
+            text: i18n(model.contents.cryptoSymbol3 + " : " + model.contents.cryptoCurRate3)
+            }
+        
+        
             }
         }
         
         Drawer {
                 id: mcmenuItem
                 width: dwrpaddedwidth
-                height: audionewsCardRectbtn.height + shareCardRectbtn.height + removeCardRectbtn.height + disableCardRectbtn.height 
+                height: removeCardRectbtn.height + disableCardRectbtn.height 
                 edge: Qt.TopEdge
                 dragMargin: 0
 
@@ -268,112 +192,6 @@ Rectangle {
                     Column {
                         id: menuRectColumn
                         anchors.fill: parent
-                        
-                        Rectangle {
-                            id: audionewsCardRectbtn
-                            width: parent.width
-                            height: units.gridUnit * 2
-                            color: theme.backgroundColor
-                            
-                            Row {
-                               spacing: 5
-                                PlasmaCore.IconItem {
-                                   id: audionewsCardIcon
-                                   anchors.verticalCenter: parent.verticalCenter
-                                   source: "media-playback-start"
-                                   width: units.gridUnit * 2
-                                   height: units.gridUnit * 2
-                               }
-                               Rectangle {
-                                   id: audionewsCardSeperater
-                                   width: 1
-                                   height: parent.height
-                                   color: theme.linkColor
-                               }
-                               PlasmaComponents.Label {
-                                   id: audionewsCardLabel
-                                   anchors.verticalCenter: parent.verticalCenter
-                                   text: "Play / Listen To News Article"
-                                }
-                            }
-                            MouseArea {
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                    onEntered: {
-                                        audionewsCardLabel.color = theme.linkColor
-                                    }
-                                    onExited:{
-                                        audionewsCardLabel.color = theme.textColor
-                                    }
-                                    onClicked:{
-                                    mcmenuItem.close()
-                                    var sendnewsurl = "getarticle newsurl " + model.contents.newsURL
-                                    var socketmessage = {};
-                                        socketmessage.type = "recognizer_loop:utterance";
-                                        socketmessage.data = {};
-                                        socketmessage.data.utterances = [sendnewsurl];
-                                        socket.sendTextMessage(JSON.stringify(socketmessage));
-                                    }
-                                }
-                            }
-                        
-                        Rectangle {
-                            id: btnshorzSepr1
-                            width: parent.width
-                            height: 1
-                            color: theme.linkColor
-                        }
-                        
-                        Rectangle {
-                            id: shareCardRectbtn
-                            width: parent.width
-                            height: units.gridUnit * 2
-                            color: theme.backgroundColor
-                            
-                            Row {
-                               spacing: 5
-                                PlasmaCore.IconItem {
-                                   id: shareCardIcon
-                                   anchors.verticalCenter: parent.verticalCenter
-                                   source: "retweet"
-                                   width: units.gridUnit * 2
-                                   height: units.gridUnit * 2
-                               }
-                               Rectangle {
-                                   id: shareCardSeperater
-                                   width: 1
-                                   height: parent.height
-                                   color: theme.linkColor
-                               }
-                               PlasmaComponents.Label {
-                                   id: shareCardLabel
-                                   anchors.verticalCenter: parent.verticalCenter
-                                   text: "Share News Link"
-                                }
-                            }
-                            MouseArea {
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                    onEntered: {
-                                        shareCardLabel.color = theme.linkColor
-                                    }
-                                    onExited:{
-                                        shareCardLabel.color = theme.textColor
-                                    }
-                                    onClicked:{
-                                        mcmenuItem.close()
-                                        sharePagePopup.open()
-                                    }
-                                }
-                            }
-
-                        
-                        Rectangle {
-                            id: btnshorzSepr2
-                            width: parent.width
-                            height: 1
-                            color: theme.linkColor
-                        }
                         
                         Rectangle {
                             id: removeCardRectbtn
@@ -413,12 +231,13 @@ Rectangle {
                                     }
                                     onClicked:{
                                         dashCardCollectionModel.remove(index)
+                                        removeChildCard()
                                     }
                                 }
                             }
                             
                         Rectangle {
-                            id: btnshorzSepr3
+                            id: btnshorzSepr
                             width: parent.width
                             height: 1
                             color: theme.linkColor
@@ -448,7 +267,7 @@ Rectangle {
                                PlasmaComponents.Label {
                                    id: disableCardLabel
                                    anchors.verticalCenter: parent.verticalCenter
-                                   text: "Disable News Cards"
+                                   text: "Disable Cryptocurrency Card"
                                 }
                             }
                             MouseArea {
@@ -461,12 +280,13 @@ Rectangle {
                                         disableCardLabel.color = theme.textColor
                                     }
                                     onClicked:{
+                                        cryptocardswitch.checked = false
                                         dashCardCollectionModel.remove(index)
                                         removeChildCard()
-                                        newscardswitch.checked = false
                                         }
                                     }
                                 }
+                                
                         Rectangle {
                             id: btnshorzSeprEnd
                             width: parent.width
@@ -479,9 +299,9 @@ Rectangle {
                                    source: "go-up"
                                    width: units.gridUnit * 2
                                    height: units.gridUnit * 2
-                               }
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }

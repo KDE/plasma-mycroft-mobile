@@ -29,7 +29,8 @@ Rectangle {
     color: theme.backgroundColor
     //anchors.fill: parent
     property alias suggest1: suggestiontext1.text
-    property alias suggest2: suggestiontext2.text
+    property alias talkingAnim: midbarAnim
+    property alias outterAnim: waitanimoutter
     property alias suggest3: suggestiontext3.text
 
     Rectangle {
@@ -112,62 +113,112 @@ Rectangle {
         }
     } 
 
-    Rectangle {
-        id: suggestionbutton2
-        color: theme.backgroundColor
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
-        anchors.top: parent.top
-        anchors.topMargin: 0
-        anchors.right: suggestionbutton3.left
-        anchors.rightMargin: 0
-        border.width: 0.2
-        anchors.left: suggestbarDividerline1.right
-        anchors.leftMargin: 0
-        border.color: theme.textColor
-        
-        PlasmaCore.IconItem {
-          id: suggest2imageicon  
-          anchors.right: suggestiontext2.left
-          anchors.rightMargin: units.gridUnit * 0.5
-          anchors.verticalCenter: parent.verticalCenter
-          source: "gtk-stop"
-          width: units.gridUnit * 2
-          height: units.gridUnit * 2
-        }
+//     Rectangle {
+//         id: suggestionbutton2
+//         color: theme.backgroundColor
+//         anchors.bottom: parent.bottom
+//         anchors.bottomMargin: 0
+//         anchors.top: parent.top
+//         anchors.topMargin: 0
+//         anchors.right: suggestionbutton3.left
+//         anchors.rightMargin: 0
+//         border.width: 0.2
+//         anchors.left: suggestbarDividerline1.right
+//         anchors.leftMargin: 0
+//         border.color: theme.textColor
+//         
+//         PlasmaCore.IconItem {
+//           id: suggest2imageicon  
+//           anchors.right: suggestiontext2.left
+//           anchors.rightMargin: units.gridUnit * 0.5
+//           anchors.verticalCenter: parent.verticalCenter
+//           source: "gtk-stop"
+//           width: units.gridUnit * 2
+//           height: units.gridUnit * 2
+//         }
+// 
+//         MouseArea {
+//             id: mouseArea2
+//             anchors.fill: parent
+//             hoverEnabled: true
+// 
+//             onEntered: {
+//             suggestionbutton2.color = theme.textColor
+//             suggestiontext2.color = theme.backgroundColor
+//             }
+// 
+//             onExited: {
+//             suggestionbutton2.color = theme.backgroundColor
+//             suggestiontext2.color = theme.textColor
+//             }
+// 
+//             onClicked: {
+//                 var socketmessage = {};
+//                 socketmessage.type = "recognizer_loop:utterance";
+//                 socketmessage.data = {};
+//                 socketmessage.data.utterances = ["stop"];
+//                 socket.sendTextMessage(JSON.stringify(socketmessage));
+//             }
+//         }
+// 
+//         PlasmaComponents.Label {
+//             id: suggestiontext2
+//             text: i18n("Stop")
+//             anchors.verticalCenter: parent.verticalCenter
+//             anchors.horizontalCenter: parent.horizontalCenter
+//             font.pixelSize: 12
+//         }
+//     }
 
-        MouseArea {
-            id: mouseArea2
-            anchors.fill: parent
-            hoverEnabled: true
-
-            onEntered: {
-            suggestionbutton2.color = theme.textColor
-            suggestiontext2.color = theme.backgroundColor
-            }
-
-            onExited: {
-            suggestionbutton2.color = theme.backgroundColor
-            suggestiontext2.color = theme.textColor
-            }
-
-            onClicked: {
-                var socketmessage = {};
-                socketmessage.type = "recognizer_loop:utterance";
-                socketmessage.data = {};
-                socketmessage.data.utterances = ["stop"];
-                socket.sendTextMessage(JSON.stringify(socketmessage));
-            }
-        }
-
-        PlasmaComponents.Label {
-            id: suggestiontext2
-            text: i18n("Stop")
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 12
-        }
+Rectangle {
+    anchors.bottom: parent.bottom
+    anchors.bottomMargin: 0
+    anchors.top: parent.top
+    anchors.topMargin: 0
+    anchors.right: suggestionbutton3.left
+    anchors.rightMargin: 0
+    border.width: 0.2
+    anchors.left: suggestbarDividerline1.right
+    anchors.leftMargin: 0
+    border.color: theme.textColor
+    color: theme.linkColor
+    z: 111
+    clip: true
+     
+    CustomMicIndicator {
+            id: waitanimoutter
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            visible: true
+            z: 115
     }
+     
+    TopBarAnim {
+        id: midbarAnim
+        anchors.verticalCenter: waitanimoutter.verticalCenter
+        anchors.left: parent.left
+        anchors.leftMargin: units.gridUnit * 0.5
+        anchors.right: parent.right
+        anchors.rightMargin: units.gridUnit * 0.5
+        height: units.gridUnit * 3.5
+        z: 114
+        visible: true
+    }
+    
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+                var socketmessage = {};
+                socketmessage.type = "mycroft.mic.listen";
+                socketmessage.data = {};
+                socketmessage.data.utterances = [];
+                socket.sendTextMessage(JSON.stringify(socketmessage));
+        }
+        
+    }
+}
     
     PlasmaCore.SvgItem {
         id: suggestbarDividerline2
@@ -229,9 +280,6 @@ Rectangle {
 
             onClicked: {
                 convoLmodel.clear()
-                if(dashswitch.checked == true && dashLmodel.count == 0){
-                    showDash("setVisible")
-                }
             }
         }
 

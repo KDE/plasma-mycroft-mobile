@@ -26,19 +26,32 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import QtGraphicalEffects 1.0
 
-Item {
+Rectangle {
         id: dashDelegateItm
-        height: units.gridUnit * 3
-        width: cbwidth
+        height: contentdlgtitem.height
+        width: cbwidth - units.gridUnit * 0.50
+        border.width: 1        
+        border.color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.2)
+        color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.2) 
+        layer.enabled: true
+        layer.effect: DropShadow {
+            horizontalOffset: 0
+            verticalOffset: 1
+            radius: 10
+            samples: 32
+            spread: 0.1
+            color: Qt.rgba(0, 0, 0, 0.3)
+        }
         
         Item {
             id: contentdlgtitem
             width: parent.width
-            height: parent.height
+            height: dashHeader.height + dashHeaderSeprtr.height + nwsseprator.height + dashinner.height
             
             Item {
             id: skillTopRowLayout
             anchors.top: parent.top
+            anchors.topMargin: units.gridUnit * 0.25
             anchors.left: parent.left
             anchors.right: parent.right
             implicitHeight: dashHeader.height
@@ -48,10 +61,15 @@ Item {
                 anchors.left: dashHeaderSeprtr.right
                 anchors.leftMargin: units.gridUnit * 0.25
                 anchors.verticalCenter: parent.verticalCenter
-                wrapMode: Text.Wrap;
-                font.bold: true;
+                wrapMode: Text.Wrap
+                font.bold: true
+                font.pointSize: theme.defaultFont.pointSize
+                font.letterSpacing: theme.defaultFont.letterSpacing
+                font.wordSpacing: theme.defaultFont.wordSpacing
+                font.family: theme.defaultFont.family
+                renderType: Text.NativeRendering 
                 text: i18n("Let's Continue ?")
-                color: theme.textColor
+                color: PlasmaCore.ColorScope.textColor
             }
             
             PlasmaCore.SvgItem {
@@ -101,7 +119,7 @@ Item {
                 id: nwsseprator
                 width: parent.width
                 anchors.top: skillTopRowLayout.bottom
-                anchors.topMargin: 1
+                anchors.topMargin: units.gridUnit * 0.25
                 height: 2
                 color: theme.linkColor
         }
@@ -120,7 +138,11 @@ Item {
             anchors.right: parent.right
             anchors.left: parent.left
             anchors.leftMargin: 2
-            color: theme.textColor ;
+            color: PlasmaCore.ColorScope.textColor
+            font.pointSize: theme.defaultFont.pointSize
+            font.letterSpacing: theme.defaultFont.letterSpacing
+            font.wordSpacing: theme.defaultFont.wordSpacing
+            font.family: theme.defaultFont.family
             text: i18n("Mycroft by default is powered by a cloud-based speech to text service. Mycroft gives you the ability to change speech to text services or use a locally configured one within their settings at home.mycroft.ai.")
                 }
             }
@@ -130,9 +152,8 @@ Item {
                 id: mcmenuItem
                 width: dwrpaddedwidth
                 height: removeCardRectbtn.height + disableCardRectbtn.height 
-                y: getY
+                edge: Qt.TopEdge
                 dragMargin: 0
-                z: 30
 
                 Rectangle {
                     id: menuRectItem
@@ -180,7 +201,7 @@ Item {
                                         removeCardLabel.color = theme.textColor
                                     }
                                     onClicked:{
-                                        disclaimerListModel.remove(index)
+                                        dashCardCollectionModel.remove(index)
                                         removeChildCard()
                                     }
                                 }
@@ -231,7 +252,7 @@ Item {
                                     }
                                     onClicked:{
                                         disclaimercardswitch.checked = false
-                                        disclaimerListModel.remove(index)
+                                        dashCardCollectionModel.remove(index)
                                         removeChildCard()
                                         }
                                     }

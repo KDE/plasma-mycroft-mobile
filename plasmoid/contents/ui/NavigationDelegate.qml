@@ -46,7 +46,7 @@ Rectangle {
              }
            }
         }
-    
+
      Row {
          id: navMapRow
          spacing: 4
@@ -97,5 +97,5 @@ Rectangle {
           }
         }
      }
-}    
+}
 
