@@ -97,7 +97,7 @@ Rectangle {
                     verticalCenter: parent.verticalCenter
                 }
                 height: units.gridUnit * 1
-                width: linetopleftvertSvg.elementSize("vertical-line").width
+                width: dashhdrvertSvg.elementSize("vertical-line").width
                 z: 110
                 elementId: "vertical-line"
 
