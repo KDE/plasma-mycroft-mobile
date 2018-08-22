@@ -33,9 +33,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 )
 
 add_subdirectory(plugin)
-
+add_subdirectory(icons)
 plasma_install_package(plasmoid org.kde.phone.mycroftplasmoid)
 
-install( DIRECTORY image/breeze DESTINATION ${ICON_INSTALL_DIR})
-install( DIRECTORY image/breeze-dark DESTINATION ${ICON_INSTALL_DIR})
 install( DIRECTORY mycroft DESTINATION /etc )
