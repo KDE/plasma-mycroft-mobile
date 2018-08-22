@@ -72,9 +72,6 @@ Rectangle {
             }
 
             onClicked: {
-            //var suggest1 = qinput.text
-            //var lastIndex = suggest1.lastIndexOf(" ");
-            //qinput.text = suggest1.substring(0, lastIndex) +  " " + suggestiontext1.text + " "
                 var socketmessage = {};
                 socketmessage.type = "recognizer_loop:utterance";
                 socketmessage.data = {};
@@ -88,7 +85,6 @@ Rectangle {
             text: i18n("Ask Another")
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            font.pixelSize: 12
         }
     }
     
@@ -112,63 +108,6 @@ Rectangle {
             imagePath: "widgets/line"
         }
     } 
-
-//     Rectangle {
-//         id: suggestionbutton2
-//         color: theme.backgroundColor
-//         anchors.bottom: parent.bottom
-//         anchors.bottomMargin: 0
-//         anchors.top: parent.top
-//         anchors.topMargin: 0
-//         anchors.right: suggestionbutton3.left
-//         anchors.rightMargin: 0
-//         border.width: 0.2
-//         anchors.left: suggestbarDividerline1.right
-//         anchors.leftMargin: 0
-//         border.color: theme.textColor
-//         
-//         PlasmaCore.IconItem {
-//           id: suggest2imageicon  
-//           anchors.right: suggestiontext2.left
-//           anchors.rightMargin: units.gridUnit * 0.5
-//           anchors.verticalCenter: parent.verticalCenter
-//           source: "gtk-stop"
-//           width: units.gridUnit * 2
-//           height: units.gridUnit * 2
-//         }
-// 
-//         MouseArea {
-//             id: mouseArea2
-//             anchors.fill: parent
-//             hoverEnabled: true
-// 
-//             onEntered: {
-//             suggestionbutton2.color = theme.textColor
-//             suggestiontext2.color = theme.backgroundColor
-//             }
-// 
-//             onExited: {
-//             suggestionbutton2.color = theme.backgroundColor
-//             suggestiontext2.color = theme.textColor
-//             }
-// 
-//             onClicked: {
-//                 var socketmessage = {};
-//                 socketmessage.type = "recognizer_loop:utterance";
-//                 socketmessage.data = {};
-//                 socketmessage.data.utterances = ["stop"];
-//                 socket.sendTextMessage(JSON.stringify(socketmessage));
-//             }
-//         }
-// 
-//         PlasmaComponents.Label {
-//             id: suggestiontext2
-//             text: i18n("Stop")
-//             anchors.verticalCenter: parent.verticalCenter
-//             anchors.horizontalCenter: parent.horizontalCenter
-//             font.pixelSize: 12
-//         }
-//     }
 
 Rectangle {
     anchors.bottom: parent.bottom
@@ -199,9 +138,7 @@ Rectangle {
         id: midbarAnim
         anchors.verticalCenter: waitanimoutter.verticalCenter
         anchors.left: parent.left
-        anchors.leftMargin: units.gridUnit * 0.5
         anchors.right: parent.right
-        anchors.rightMargin: units.gridUnit * 0.5
         height: units.gridUnit * 3.5
         z: 114
         visible: true
@@ -288,7 +225,6 @@ Rectangle {
             text: i18n("Clear")
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 12
             }
         }
 }

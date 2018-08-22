@@ -81,6 +81,27 @@ Item {
     property var weatherMetric: "metric"
     property date currentDate: new Date()
     
+    
+    function checkDashStatus(){
+        if(dashListModel.count == 0){
+            checkConnectionStatus()
+        }
+    }
+    
+    function checkConnectionStatus(){
+        var isConnected = PlasmaLa.ConnectionCheck.checkConnection()
+        if(!isConnected){
+               if(!connectCtx){
+               var conError = i18n("I am not connected to the internet, Please check your network connection")
+               convoLmodel.append({"itemType": "NonVisual", "InputQuery": conError});
+               connectCtx = true
+               }
+            }
+        else {
+            geoDataSource.connectedSources = ["location"]
+            }
+    }
+    
     function toggleInputMethod(selection){
         switch(selection){
         case "KeyboardSetActive":
@@ -661,12 +682,15 @@ PlasmaComponents.TabBar {
                         convoLmodel.clear()
                         suggst.visible = true;
                         socket.active = false;
+                        showDash("setVisible")
                     }
                     
                     if (mycroftstartservicebutton.checked === true) {
                         disclaimbox.visible = false;
                         PlasmaLa.LaunchApp.runCommand("bash", coreinstallstartpath);
-                        convoLmodel.clear()
+                        if(dashswitch.checked == "false"){
+                            convoLmodel.clear()
+                        }
                         suggst.visible = true;
                         delay(15000, function() {
                         socket.active = true;
@@ -731,10 +755,33 @@ Rectangle {
             playwaitanim(msgType);
             qinput.focus = false;
             suggst.talkingAnim.wsistalking()
+            
+            if (msgType === "mycroft.mic.get_status.response") {
+                var micState = somestring.data.muted
+                if(micState) {
+                    micIsMuted = true
+                    qinputmicbx.iconSource = "mic-off"
+                }
+                else if(!micState) {
+                     micIsMuted = false
+                     qinputmicbx.iconSource = "mic-on"
+                }
+            }
+            
             if (msgType === "recognizer_loop:utterance") {
                 var intpost = somestring.data.utterances;
                 qinput.text = intpost.toString()
                 convoLmodel.append({"itemType": "AskType", "InputQuery": intpost.toString()})
+            }
+            
+            if (msgType === "recognizer_loop:utterance" && dashLmodel.count != 0){
+                showDash("setHide")
+            }
+            
+            if (somestring.data.handler === "fallback" && somestring.data.fallback_handler === "WolframAlphaSkill.handle_fallback" && somestring.type === "mycroft.skill.handler.complete"){
+                        if(wolframfallbackswitch.checked == true){
+                            getFallBackResult(qinput.text)
+                    }
             }
             
             if (somestring && somestring.data && typeof somestring.data.intent_type !== 'undefined'){

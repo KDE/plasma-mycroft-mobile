@@ -25,10 +25,8 @@ Item {
     
    //anchors.fill: parent
    function wsistalking() {
-                console.log('here')
                 seqrun.running = true
                 canvasmiddlegraphics.visible = !canvasmiddlegraphics.visible
-                console.log('here 2')
             } 
     
     SequentialAnimation{
@@ -195,7 +193,7 @@ Item {
                                   ctxside.lineWidth = 1;
                                   ctxside.strokeStyle = 'white';
 
-                                  for(var Vx = oStartx; Vx < width * 0.75; Vx++) {
+                                  for(var Vx = oStartx; Vx < width * 1; Vx++) {
 
                                       var Vy = amplitude * Math.sin( Vx / period + ( i  / 5 + Math.floor(Math.random() * 2) + 0));
                                       ctxside.lineTo( oStartx + Vx + 0.2,  oStarty + Vy);

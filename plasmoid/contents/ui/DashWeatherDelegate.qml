@@ -80,22 +80,7 @@ Rectangle {
                 width: units.gridUnit * 1.25
                 height: units.gridUnit * 1.25
             }
-            
-            Text {
-                id: weatherDashCardWind
-                anchors.right: parent.right
-                anchors.rightMargin: units.gridUnit * 1
-                anchors.verticalCenter: parent.verticalCenter
-                font.bold: true;
-                font.pointSize: theme.defaultFont.pointSize
-                font.letterSpacing: theme.defaultFont.letterSpacing
-                font.wordSpacing: theme.defaultFont.wordSpacing
-                font.family: theme.defaultFont.family
-                renderType: Text.NativeRendering 
-                color: PlasmaCore.ColorScope.textColor
-                text: i18n("Wind | " + model.contents.itemWeatherWindHourZero + " meters/sec")
-            }
-            
+                        
             PlasmaCore.SvgItem {
                 id: dashHeaderSeprtr
                 anchors {
