@@ -68,7 +68,7 @@ Rectangle {
                 font.family: theme.defaultFont.family
                 renderType: Text.NativeRendering 
                 color: PlasmaCore.ColorScope.textColor
-                text: i18n(model.contents.itemWeatherCity + " | " + model.contents.itemWeatherTempTypeHourZero)
+                text: i18n("%1 | %2", model.contents.itemWeatherCity, model.contents.itemWeatherTempTypeHourZero)
             }
             
             Image {
@@ -146,7 +146,7 @@ Rectangle {
                 color: PlasmaCore.ColorScope.textColor
                 wrapMode: Text.WordWrap;
                 font.bold: true;
-                text: i18n("Date: " + model.contents.itemWeatherDateHourZero.split(" ")[0] + " | " + "Time: " + model.contents.itemWeatherDateHourZero.split(" ")[1])
+                text: i18n("Date: %1 | Time: %2", model.contents.itemWeatherDateHourZero.split(" ")[0], model.contents.itemWeatherDateHourZero.split(" ")[1])
             }
             
             Rectangle {
@@ -171,7 +171,7 @@ Rectangle {
                 color: PlasmaCore.ColorScope.textColor
                 wrapMode: Text.WordWrap;
                 font.bold: true;
-                text: "Minimum Temperature: " + model.contents.itemWeatherTempMinHourZero + model.contents.itemWeatherMetricType
+                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Minimum Temperature: %1%2", model.contents.itemWeatherTempMinHourZero, model.contents.itemWeatherMetricType)
                 }
                 
             Rectangle {
@@ -196,7 +196,7 @@ Rectangle {
                 color: PlasmaCore.ColorScope.textColor
                 wrapMode: Text.WordWrap;
                 font.bold: true;
-                text: "Current Temperature: " + model.contents.itemWeatherTempHourZero + model.contents.itemWeatherMetricType
+                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Current Temperature: %1%2", model.contents.itemWeatherTempHourZero, model.contents.itemWeatherMetricType)
             }
             
             Rectangle {
@@ -221,7 +221,7 @@ Rectangle {
                 color: PlasmaCore.ColorScope.textColor
                 wrapMode: Text.WordWrap;
                 font.bold: true;
-                text:"Maximum Temperature: " + model.contents.itemWeatherTempMaxHourZero + model.contents.itemWeatherMetricType
+                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Maximum Temperature: %1%2", model.contents.itemWeatherTempMaxHourZero, model.contents.itemWeatherMetricType)
                 }
  
                 PlasmaCore.SvgItem {
@@ -435,7 +435,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("D: " + model.contents.itemWeatherDateHourA.split(" ")[0] + " | " + "T: " + model.contents.itemWeatherDateHourA.split(" ")[1])
+                                text: i18nc("D stand for Day, T stands for Time", "D: %1 | T: %2", model.contents.itemWeatherDateHourA.split(" ")[0], model.contents.itemWeatherDateHourA.split(" ")[1])
                              }
                              
                              Rectangle {
@@ -459,7 +459,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("Condition: " + model.contents.itemWeatherTempTypeHourA)
+                                text: i18n("Condition: %1", model.contents.itemWeatherTempTypeHourA)
                              }
                              
                             Image {
@@ -492,7 +492,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("Wind: " + model.contents.itemWeatherWindHourA + " meters/sec")
+                                text: i18n("Wind: %1 meters/sec", model.contents.itemWeatherWindHourA)
                              }
                              
                              Rectangle {
@@ -516,7 +516,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: "Min: " + model.contents.itemWeatherTempHourA + model.contents.itemWeatherMetricType
+                                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Min: %1%2", model.contents.itemWeatherTempHourA, model.contents.itemWeatherMetricType)
                              }
                              
                              Rectangle {
@@ -541,7 +541,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: "Max: " + model.contents.itemWeatherTempHourA + model.contents.itemWeatherMetricType
+                                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Max: %1%2", model.contents.itemWeatherTempHourA, model.contents.itemWeatherMetricType)
                                 }
                               }
                               
@@ -561,7 +561,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("D: " + model.contents.itemWeatherDateHourB.split(" ")[0] + " | " + "T: " + model.contents.itemWeatherDateHourB.split(" ")[1])
+                                text: i18nc("D stand for Day, T stands for Time", "D: %1 | T: %2", model.contents.itemWeatherDateHourB.split(" ")[0], model.contents.itemWeatherDateHourB.split(" ")[1])
                                 }
                              
                              Rectangle {
@@ -585,7 +585,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("Condition: " + model.contents.itemWeatherTempTypeHourB)
+                                text: i18n("Condition: %1", model.contents.itemWeatherTempTypeHourB)
                              }
                              
                              Image {
@@ -618,7 +618,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: i18n("Wind: " + model.contents.itemWeatherWindHourB + " meters/sec")
+                                text: i18n("Wind: %1 meters/sec", model.contents.itemWeatherWindHourB)
                              }
                              
                              Rectangle {
@@ -642,7 +642,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: "Min: " + model.contents.itemWeatherTempHourB + model.contents.itemWeatherMetricType
+                                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Min: %1%2", model.contents.itemWeatherTempHourB, model.contents.itemWeatherMetricType)
                              }
                              
                              Rectangle {
@@ -667,7 +667,7 @@ Rectangle {
                                 color: PlasmaCore.ColorScope.textColor
                                 wrapMode: Text.WordWrap;
                                 font.bold: true;
-                                text: "Max: " + model.contents.itemWeatherTempHourB + model.contents.itemWeatherMetricType
+                                text: i18nc("%1 is value, %2 is unit (Celsius or Fahrenheit degree)", "Max: %1%2", model.contents.itemWeatherTempHourB, model.contents.itemWeatherMetricType)
                              }
                          }
                      }
@@ -730,7 +730,7 @@ Rectangle {
                                PlasmaComponents.Label {
                                    id: removeCardLabel
                                    anchors.verticalCenter: parent.verticalCenter
-                                   text: "Remove Card"
+                                   text: i18n("Remove Card")
                                 }
                             }
                             MouseArea {
@@ -780,7 +780,7 @@ Rectangle {
                                PlasmaComponents.Label {
                                    id: disableCardLabel
                                    anchors.verticalCenter: parent.verticalCenter
-                                   text: "Disable Weather Cards"
+                                   text: i18n("Disable Weather Cards")
                                 }
                             }
                             MouseArea {

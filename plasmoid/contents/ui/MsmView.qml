@@ -49,7 +49,7 @@ Rectangle {
                     var customFold = '/opt/mycroft/skills/'
                     var skillPath = customFold + model.name
                     if(PlasmaLa.FileReader.file_exists_local(skillPath)){
-                        installLabl.text = "Installed"
+                        installLabl.text = i18n("Installed")
                         getskillviamsmRect.color = Qt.lighter(theme.textColor, 1.2)
                         installLabl.color = Qt.darker(theme.backgroundColor, 1.2)
                         skillcontent.border.color = Qt.lighter(theme.textColor, 1.2)
@@ -123,7 +123,7 @@ Rectangle {
                        id: installLabl
                        wrapMode: Text.WordWrap
                        anchors.centerIn: parent
-                       text: "Install"
+                       text: i18n("Install")
                        color: Qt.darker(theme.backgroundColor, 1.2)
                     }
 
@@ -140,13 +140,13 @@ Rectangle {
                     hoverEnabled: true
                     onEntered: {
                         switch(installLabl.text){
-                            case "Install":
+                            case i18n("Install"):
                                 getskillviamsmRect.color = Qt.lighter(theme.backgroundColor, 1.2)
                                 installLabl.color = Qt.darker(theme.linkColor, 1.2)
                                 getskillviamsmRect.border.width = 1        
                                 getskillviamsmRect.border.color = Qt.darker(theme.linkColor, 1.2)
                                 break
-                            case "Installed":
+                            case i18n("Installed"):
                                 getskillviamsmRect.color = Qt.lighter(theme.textColor, 1.2)
                                 installLabl.color = Qt.darker(theme.backgroundColor, 1.2)
                                 getskillviamsmRect.border.width = 0        
@@ -157,12 +157,12 @@ Rectangle {
                     }
                     onExited: {
                         switch(installLabl.text){
-                            case "Install":
+                            case i18n("Install"):
                                 getskillviamsmRect.color = Qt.darker(theme.linkColor, 1.2)
                                 installLabl.color = Qt.darker(theme.backgroundColor, 1.2)
                                 getskillviamsmRect.border.width = 0
                                 break
-                            case "Installed":
+                            case i18n("Installed"):
                                 getskillviamsmRect.color = Qt.lighter(theme.textColor, 1.2)
                                 installLabl.color = Qt.darker(theme.backgroundColor, 1.2)
                                 getskillviamsmRect.border.width = 0
@@ -184,7 +184,7 @@ Rectangle {
                             {
                             msmSkillInstallProgBar.visible = false
                             installLabl.visible = true
-                            installLabl.text = "Installed"
+                            installLabl.text = i18n("Installed")
                             getSkillInfoLocal()
                             }
                         }
