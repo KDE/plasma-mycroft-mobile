@@ -48,10 +48,10 @@ Item {
     property alias cbheight: rectangle2.height
     property var dwrpaddedwidth: main.width + units.gridUnit * 1
     property var cbdrawercontentheight: parent.height + units.gridUnit * 0.5 - rectanglebottombar.height
-    property string defaultmcorestartpath: "/usr/share/plasma/plasmoids/org.kde.plasma.mycroftplasmoid/contents/code/startservice.sh"
-    property string defaultmcorestoppath: "/usr/share/plasma/plasmoids/org.kde.plasma.mycroftplasmoid/contents/code/stopservice.sh"
-    property string packagemcorestartcmd: "/usr/share/plasma/plasmoids/org.kde.plasma.mycroftplasmoid/contents/code/pkgstartservice.sh"
-    property string packagemcorestopcmd: "/usr/share/plasma/plasmoids/org.kde.plasma.mycroftplasmoid/contents/code/pkgstopservice.sh"
+    property string defaultmcorestartpath: "/usr/share/plasma/plasmoids/org.kde.phone.mycroftplasmoid/contents/code/startservice.sh"
+    property string defaultmcorestoppath: "/usr/share/plasma/plasmoids/org.kde.phone.mycroftplasmoid/contents/code/stopservice.sh"
+    property string packagemcorestartcmd: "/usr/share/plasma/plasmoids/org.kde.phone.mycroftplasmoid/contents/code/pkgstartservice.sh"
+    property string packagemcorestopcmd: "/usr/share/plasma/plasmoids/org.kde.phone.mycroftplasmoid/contents/code/pkgstopservice.sh"
     property string customlocstartpath: startsrvcustom.text
     property string customlocstoppath: stopsrvcustom.text
     property string customloc: " "
