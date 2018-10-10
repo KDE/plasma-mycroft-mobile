@@ -1,7 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=MycroftPlasmoid
-Name[ast]=MycroftPlasmoid
 Name[ca]=Plasmoide del Mycroft
 Name[ca@valencia]=Plasmoide del Mycroft
 Name[cs]=MycroftPlasmoid
@@ -15,7 +14,6 @@ Name[sv]=Mycroft Plasmoid
 Name[uk]=Плазмоїд Mycroft
 Name[x-test]=xxMycroftPlasmoidxx
 Comment=Mycroft applet for plasma desktop
-Comment[ast]=Applet de Mycroft pal escitoriu de Plasma
 Comment[ca]=Miniaplicació Mycroft per a l'escriptori Plasma
 Comment[ca@valencia]=Miniaplicació Mycroft per a l'escriptori Plasma
 Comment[cs]=Applet Mycroft pro pracovní prostředí Plasma
