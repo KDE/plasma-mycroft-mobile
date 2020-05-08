@@ -28,7 +28,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.private.mycroftplasmoid 1.0 as PlasmaLa
+import org.kde.private.mycroftplasmoidmobile 1.0 as PlasmaLa
 import org.kde.plasma.private.volume 0.1
 
 PlasmaComponents.ToolButton {

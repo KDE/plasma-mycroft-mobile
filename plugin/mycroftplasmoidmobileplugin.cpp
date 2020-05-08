@@ -16,7 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "mycroftplasmoidplugin.h"
+#include "mycroftplasmoidmobileplugin.h"
 #include "mycroftplasmoid_dbus.h"
 #include "launchapp.h"
 #include "notify.h"
@@ -50,7 +50,7 @@ static QObject *filereader_singleton(QQmlEngine *engine, QJSEngine *scriptEngine
     return new FileReader;
 }
 
-void MycroftPlasmoidPlugin::registerTypes(const char *uri)
+void MycroftPlasmoidMobilePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.private.mycroftplasmoid"));
     qmlRegisterSingletonType<Notify>(uri, 1, 0, "Notify", notify_singleton);
@@ -59,7 +59,7 @@ void MycroftPlasmoidPlugin::registerTypes(const char *uri)
     qmlRegisterType<MsmApp>(uri, 1, 0, "MsmApp");
 }
 
-void MycroftPlasmoidPlugin::initializeEngine(QQmlEngine* engine, const char* uri)
+void MycroftPlasmoidMobilePlugin::initializeEngine(QQmlEngine* engine, const char* uri)
 {
   QQmlExtensionPlugin::initializeEngine(engine, uri);
   auto mycroftDbusAdapterInterface = new MycroftDbusAdapterInterface(engine);

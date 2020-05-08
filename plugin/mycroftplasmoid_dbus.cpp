@@ -17,7 +17,7 @@
  */
 
 #include "mycroftplasmoid_dbus.h"
-#include "mycroftplasmoidplugin.h"
+#include "mycroftplasmoidmobileplugin.h"
 #include <QMetaObject>
 #include <QByteArray>
 #include <QList>

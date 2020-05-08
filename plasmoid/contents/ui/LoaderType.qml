@@ -22,7 +22,7 @@ import QtQml.Models 2.2
 import QtQuick.Controls 2.2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.private.mycroftplasmoid 1.0 as PlasmaLa
+import org.kde.private.mycroftplasmoidmobile 1.0 as PlasmaLa
 
 Column {
                     spacing: 6
