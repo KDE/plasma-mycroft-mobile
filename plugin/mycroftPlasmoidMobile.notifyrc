@@ -1,27 +1,6 @@
 [Global]
 IconName=mycroft-plasma-appicon
 Comment=Mycroft Plasmoid Mobile
-Comment[ca]=Plasmoide del Mycroft Mobile
-Comment[ca@valencia]=Plasmoide del Mycroft Mobile
-Comment[cs]=Plasmoid Mycroft Mobile
-Comment[de]=Mycroft-Plasmoid Mobile
-Comment[es]=Plasmoide de Mycroft Mobile
-Comment[et]=Mycrofti plasmoid Mobile
-Comment[fi]=Mycroft-sovelma Mobile
-Comment[fr]=Composant graphique Mycroft Mobile
-Comment[gl]=Plasmoide de Mycroft Mobile
-Comment[it]=Plasmoide Mycroft Mobile
-Comment[ko]=Mycroft Plasmoid Mobile
-Comment[nl]=Mycroft Plasmoid Mobile
-Comment[pl]=Plazmoid Mycroft Mobile
-Comment[pt]=Plasmóide do Mycroft Mobile
-Comment[pt_BR]=Plasmóide Mycroft Mobile
-Comment[sk]=Mycroft Plazmoid Mobile
-Comment[sv]=Mycroft Plasmoid Mobile
-Comment[tg]=Mycroft Plasmoid Mobile
-Comment[uk]=Плазмоїд Mycroft Mobile
-Comment[x-test]=xxMycroft Plasmoid Mobilexx
-Comment[zh_TW]=Mycroft Plasmoid Mobile
 
 [Event/MycroftResponse]
 Name=Mycroft Response
