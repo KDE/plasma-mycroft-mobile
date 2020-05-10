@@ -1,7 +1,19 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=MycroftPlasmoidMobile
+Name[ca]=MycroftPlasmoidMobile
+Name[et]=MycroftPlasmoidMobile
+Name[nl]=MycroftPlasmoidMobile
+Name[sv]=Mycroft Plasmoid Mobil
+Name[uk]=Плазмоїд мобільного Mycroft
+Name[x-test]=xxMycroftPlasmoidMobilexx
 Comment=Mycroft applet for plasma mobile
+Comment[ca]=Miniaplicació Mycroft per al Plasma mòbil
+Comment[et]=Mycrofti aplett Plasma Mobile'ile
+Comment[nl]=Mycroft applet voor Plasma mobiel
+Comment[sv]=Mycroft miniprogram för Plasma-mobil
+Comment[uk]=Аплет Mycroft для мобільної Плазми
+Comment[x-test]=xxMycroft applet for plasma mobilexx
 Type=Service
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Aditya Mehra

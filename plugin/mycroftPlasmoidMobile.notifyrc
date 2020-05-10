@@ -1,6 +1,12 @@
 [Global]
 IconName=mycroft-plasma-appicon
 Comment=Mycroft Plasmoid Mobile
+Comment[ca]=Mycroft Plasmoid Mobile
+Comment[et]=Mycrofti plasmoid mobiilile
+Comment[nl]=Mycroft Plasmoid mobiel
+Comment[sv]=Mycroft Plasmoid för mobil
+Comment[uk]=Мобільний плазмоїд Mycroft
+Comment[x-test]=xxMycroft Plasmoid Mobilexx
 
 [Event/MycroftResponse]
 Name=Mycroft Response
