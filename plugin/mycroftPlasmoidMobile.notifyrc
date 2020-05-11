@@ -2,8 +2,10 @@
 IconName=mycroft-plasma-appicon
 Comment=Mycroft Plasmoid Mobile
 Comment[ca]=Mycroft Plasmoid Mobile
+Comment[es]=Plasmoide de Mycroft para móviles
 Comment[et]=Mycrofti plasmoid mobiilile
 Comment[nl]=Mycroft Plasmoid mobiel
+Comment[pt]=Plasmóide Móvel do Mycroft
 Comment[sv]=Mycroft Plasmoid för mobil
 Comment[uk]=Мобільний плазмоїд Mycroft
 Comment[x-test]=xxMycroft Plasmoid Mobilexx
