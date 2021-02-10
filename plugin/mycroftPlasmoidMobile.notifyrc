@@ -1,6 +1,7 @@
 [Global]
 IconName=mycroft-plasma-appicon
 Comment=Mycroft Plasmoid Mobile
+Comment[az]=Mycroft Plasmoid Mobile
 Comment[ca]=Plasmoide mòbil del Mycroft
 Comment[ca@valencia]=Plasmoide mòbil del Mycroft
 Comment[cs]=Mycroft pro Plasmoid Mobile
@@ -30,6 +31,7 @@ Comment[x-test]=xxMycroft Plasmoid Mobilexx
 
 [Event/MycroftResponse]
 Name=Mycroft Response
+Name[az]=Mycroft Cavabı
 Name[ca]=Resposta del Mycroft
 Name[ca@valencia]=Resposta del Mycroft
 Name[cs]=Odpověď
@@ -62,6 +64,7 @@ Name[uk]=Відповідь Mycroft
 Name[x-test]=xxMycroft Responsexx
 Name[zh_TW]=Mycroft 回應
 Comment=Connection to device failed
+Comment[az]=Cihaza qoşulma alınmadı
 Comment[ca]=Ha fallat la connexió amb el dispositiu
 Comment[ca@valencia]=Ha fallat la connexió amb el dispositiu
 Comment[cs]=Připojení k zařízení selhalo

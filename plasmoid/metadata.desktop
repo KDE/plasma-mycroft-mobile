@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=MycroftPlasmoidMobile
+Name[az]=MycroftPlasmoidMobile
 Name[ca]=MycroftPlasmoidMobile
 Name[ca@valencia]=MycroftPlasmoidMobile
 Name[cs]=MycroftPlasmoidMobile
@@ -29,6 +30,7 @@ Name[sv]=Mycroft Plasmoid Mobil
 Name[uk]=Плазмоїд мобільного Mycroft
 Name[x-test]=xxMycroftPlasmoidMobilexx
 Comment=Mycroft applet for plasma mobile
+Comment[az]=Plasma mobile üçün Mycroft qoşması
 Comment[ca]=Miniaplicació Mycroft per al Plasma mòbil
 Comment[ca@valencia]=Miniaplicació Mycroft per al Plasma mòbil
 Comment[cs]=Applet Mycroft pro prostředí Plasma Mobile
