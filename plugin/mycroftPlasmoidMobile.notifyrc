@@ -29,6 +29,7 @@ Comment[sl]=Mycroft Plasmoid Mobile
 Comment[sv]=Mycroft Plasmoid för mobil
 Comment[uk]=Мобільний плазмоїд Mycroft
 Comment[x-test]=xxMycroft Plasmoid Mobilexx
+Comment[zh_CN]=Mycroft Plasmoid Mobile
 
 [Event/MycroftResponse]
 Name=Mycroft Response
@@ -63,6 +64,7 @@ Name[sv]=Mycroft svar
 Name[tg]=Посухи Mycroft
 Name[uk]=Відповідь Mycroft
 Name[x-test]=xxMycroft Responsexx
+Name[zh_CN]=Mycroft 响应
 Name[zh_TW]=Mycroft 回應
 Comment=Connection to device failed
 Comment[az]=Cihaza qoşulma alınmadı
