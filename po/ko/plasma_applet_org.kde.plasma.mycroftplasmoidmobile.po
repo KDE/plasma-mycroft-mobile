@@ -1,0 +1,621 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2018, 2019, 2020.
+# JungHee Lee <daemul72@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-09 03:48+0200\n"
+"PO-Revision-Date: 2020-04-01 02:00+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.04.3\n"
+
+#: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
+#, kde-format
+msgid "<i>Location: %1</i>"
+msgstr "<i>위치: %1</i>"
+
+#: contents/ui/AudioFileDelegate.qml:106
+#, kde-format
+msgid "Listen"
+msgstr "듣기"
+
+#: contents/ui/BookDelegate.qml:135
+#, kde-format
+msgid "Author: %1"
+msgstr "작성자: %1"
+
+#: contents/ui/BookDelegate.qml:141
+#, kde-format
+msgid "Publisher: %1"
+msgstr "제작사: %1"
+
+#: contents/ui/BookDelegate.qml:147
+#, kde-format
+msgid "Release Year: %1"
+msgstr "발매 연도: %1"
+
+#: contents/ui/BookDelegate.qml:153
+#, kde-format
+msgid "Availability: %1"
+msgstr "사용 가능: %1"
+
+#: contents/ui/BookDelegate.qml:168
+#, kde-format
+msgid "Read Online"
+msgstr "온라인 읽기"
+
+#: contents/ui/BookDelegate.qml:179
+#, kde-format
+msgid "Download"
+msgstr "다운로드"
+
+#: contents/ui/CurrentWeatherType.qml:191
+#, kde-format
+msgid "Minimum Temperature: %1"
+msgstr "최소 온도: %1"
+
+#: contents/ui/CurrentWeatherType.qml:219
+#, kde-format
+msgid "Current Temperature: %1"
+msgstr "현재 온도: %1"
+
+#: contents/ui/CurrentWeatherType.qml:247
+#, kde-format
+msgid "Maximum Temperature: %1"
+msgstr "최대 온도: %1"
+
+#: contents/ui/DashboardDelegate.qml:158
+#, kde-format
+msgid "Share Via Email"
+msgstr "이메일로 공유"
+
+#: contents/ui/DashCryptoDelegate.qml:71
+#, kde-format
+msgid "Currency: %1"
+msgstr "통화: %1"
+
+#: contents/ui/DashCryptoDelegate.qml:145
+#: contents/ui/DashCryptoDelegate.qml:159
+#: contents/ui/DashCryptoDelegate.qml:173
+#, kde-format
+msgctxt "%1 is the currency symbol, %2 is the current rate"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: contents/ui/DashCryptoDelegate.qml:220 contents/ui/DashNewsDelegate.qml:402
+#: contents/ui/DashWeatherDelegate.qml:733
+#: contents/ui/DisclaimerCardDelegate.qml:191
+#, kde-format
+msgid "Remove Card"
+msgstr "카드 삭제"
+
+#: contents/ui/DashCryptoDelegate.qml:270
+#, kde-format
+msgid "Disable Cryptocurrency Card"
+msgstr "암호 화폐 카드 사용 안 함"
+
+#: contents/ui/DashNewsDelegate.qml:252
+#, kde-format
+msgid "<i>Powered By: NewsAPI</i>"
+msgstr "<i>제공: NewsAPI</i>"
+
+#: contents/ui/DashNewsDelegate.qml:296
+#, kde-format
+msgid "Play / Listen To News Article"
+msgstr "재생/뉴스 기사 듣기"
+
+#: contents/ui/DashNewsDelegate.qml:351
+#, kde-format
+msgid "Share News Link"
+msgstr "뉴스 링크 공유"
+
+#: contents/ui/DashNewsDelegate.qml:451
+#, kde-format
+msgid "Disable News Cards"
+msgstr "뉴스 카드 사용 안 함"
+
+#: contents/ui/DashWeatherDelegate.qml:71
+#, kde-format
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: contents/ui/DashWeatherDelegate.qml:149
+#, kde-format
+msgid "Date: %1 | Time: %2"
+msgstr "날짜: %1 | 시간: %2"
+
+#: contents/ui/DashWeatherDelegate.qml:174
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Minimum Temperature: %1%2"
+msgstr "최소 온도: %1%2"
+
+#: contents/ui/DashWeatherDelegate.qml:199
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Current Temperature: %1%2"
+msgstr "현재 온도: %1%2"
+
+#: contents/ui/DashWeatherDelegate.qml:224
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Maximum Temperature: %1%2"
+msgstr "최대 온도: %1%2"
+
+#: contents/ui/DashWeatherDelegate.qml:263
+#, kde-format
+msgid "Expand Forecast"
+msgstr "일기예보 펼치기"
+
+#: contents/ui/DashWeatherDelegate.qml:269
+#, kde-format
+msgid "Close"
+msgstr "닫기"
+
+#: contents/ui/DashWeatherDelegate.qml:438
+#: contents/ui/DashWeatherDelegate.qml:564
+#, kde-format
+msgctxt "D stand for Day, T stands for Time"
+msgid "D: %1 | T: %2"
+msgstr "일: %1 | 시: %2"
+
+#: contents/ui/DashWeatherDelegate.qml:462
+#: contents/ui/DashWeatherDelegate.qml:588
+#, kde-format
+msgid "Condition: %1"
+msgstr "상태: %1"
+
+#: contents/ui/DashWeatherDelegate.qml:495
+#: contents/ui/DashWeatherDelegate.qml:621
+#, kde-format
+msgid "Wind: %1 meters/sec"
+msgstr "바람: %1 m/s"
+
+#: contents/ui/DashWeatherDelegate.qml:519
+#: contents/ui/DashWeatherDelegate.qml:645
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Min: %1%2"
+msgstr "최소: %1%2"
+
+#: contents/ui/DashWeatherDelegate.qml:544
+#: contents/ui/DashWeatherDelegate.qml:670
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Max: %1%2"
+msgstr "최대: %1%2"
+
+#: contents/ui/DashWeatherDelegate.qml:685
+#, kde-format
+msgid "<i>Powered By: OpenWeatherMap</i>"
+msgstr "<i>제공: OpenWeatherMap</i>"
+
+#: contents/ui/DashWeatherDelegate.qml:783
+#, kde-format
+msgid "Disable Weather Cards"
+msgstr "날씨 카드 사용 안 함"
+
+#: contents/ui/Disclaimer.qml:39 contents/ui/DisclaimerCardDelegate.qml:71
+#, kde-format
+msgid "Let's Continue?"
+msgstr "계속 하시겠습니까?"
+
+#: contents/ui/Disclaimer.qml:57
+#, kde-format
+msgid ""
+"Mycroft by default is powered by a cloud-based speech to text service. "
+"Mycroft gives you the ability to change speech to text services or use a "
+"locally configured one within their settings at home.mycroft.ai. If you "
+"agree to the default usage of Mycroft’s speech to text service, please "
+"continue. Also remember you can always choose to turn off or mute Mycroft "
+"when you do not wish to use it."
+msgstr ""
+"Mycroft는 기본적으로 클라우드 기반 받아쓰기 서비스를 사용합니다. home."
+"mycroft.ai에 있는 설정에서 다른 받아쓰기 서비스나 로컬에 설정한 서비스로 변경"
+"할 수 있습니다. 기본 Mycroft 받아쓰기 서비스 사용 조건에 동의한다면 계속 진행"
+"하십시오. Mycroft를 사용하고 싶지 않으면 언제든지 비활성화 및 음소거할 수 있"
+"습니다."
+
+#: contents/ui/Disclaimer.qml:83
+#, kde-format
+msgid "To start using Mycroft toggle the switch in the upper right corner!"
+msgstr "Mycroft를 사용하려면 오른쪽 위 모서리의 스위치를 전환하십시오!"
+
+#: contents/ui/DisclaimerCardDelegate.qml:146
+#, kde-format
+msgid ""
+"Mycroft by default is powered by a cloud-based speech to text service. "
+"Mycroft gives you the ability to change speech to text services or use a "
+"locally configured one within their settings at home.mycroft.ai."
+msgstr ""
+"Mycroft는 기본적으로 클라우드 기반 받아쓰기 서비스를 사용합니다. home."
+"mycroft.ai에 있는 설정에서 다른 받아쓰기 서비스나 로컬에 설정한 서비스로 변경"
+"할 수 있습니다."
+
+#: contents/ui/DisclaimerCardDelegate.qml:241
+#, kde-format
+msgid "Disable Disclaimer Card"
+msgstr "면책 조항 카드 사용 안 함"
+
+#: contents/ui/DocumentFileDelegate.qml:105
+#, kde-format
+msgid "Open"
+msgstr "열기"
+
+#: contents/ui/ImgRecogType.qml:66
+#, kde-format
+msgid "Broad Recognition"
+msgstr "광범위 인식"
+
+#: contents/ui/ImgRecogType.qml:81
+#, kde-format
+msgid "OCR Recognition"
+msgstr "OCR 인식"
+
+#: contents/ui/main.qml:37
+#, kde-format
+msgid "Mycroft"
+msgstr "Mycroft"
+
+#: contents/ui/MainPage.qml:95
+#, kde-format
+msgid ""
+"I am not connected to the internet, Please check your network connection"
+msgstr "인터넷에 연결되어 있지 않습니다. 네트워크 연결을 확인하십시오"
+
+#: contents/ui/MainPage.qml:600
+#, kde-format
+msgid "Home Tab"
+msgstr "홈 탭"
+
+#: contents/ui/MainPage.qml:613
+#, kde-format
+msgid "Skills Tab"
+msgstr "스킬 탭"
+
+#: contents/ui/MainPage.qml:627
+#, kde-format
+msgid "Settings Tab"
+msgstr "설정 탭"
+
+#: contents/ui/MainPage.qml:642
+#, kde-format
+msgid "Skill Installs Tab"
+msgstr "스킬 설치 탭"
+
+#: contents/ui/MainPage.qml:1054
+#, kde-format
+msgid "<i>Your Mycroft Core Installation Path</i>"
+msgstr "<i>Mycroft 코어 설치 경로</i>"
+
+#: contents/ui/MainPage.qml:1065
+#, kde-format
+msgid "Default Path"
+msgstr "기본 경로"
+
+#: contents/ui/MainPage.qml:1090
+#, kde-format
+msgid "Installed Using Mycroft Package"
+msgstr "Mycroft 패키지를 사용하여 설치됨"
+
+#: contents/ui/MainPage.qml:1115
+#, kde-format
+msgid "Location of Mycroft-Core Directory"
+msgstr "Mycroft 코어 디렉터리 경로"
+
+#: contents/ui/MainPage.qml:1144
+#, kde-format
+msgid "<custom location>/mycroft-core/"
+msgstr "<custom location>/mycroft-core/"
+
+#: contents/ui/MainPage.qml:1174 contents/ui/MainPage.qml:1175
+#, kde-format
+msgid "ws://0.0.0.0:8181/core"
+msgstr "ws://0.0.0.0:8181/core"
+
+#: contents/ui/MainPage.qml:1196
+#, kde-format
+msgid "Your Custom Image Recognition Skill Voc Keywords"
+msgstr "사용자 정의 이미지 인식 스킬 음성 키워드"
+
+#: contents/ui/MainPage.qml:1197
+#, kde-format
+msgid "search image url"
+msgstr "이미지 URL 검색"
+
+#: contents/ui/MainPage.qml:1214
+#, kde-format
+msgid "Your Custom Image OCR Skill Voc Keywords"
+msgstr "사용자 정의 이미지 OCR 스킬 음성 키워드"
+
+#: contents/ui/MainPage.qml:1215
+#, kde-format
+msgid "ocr image url"
+msgstr "OCR 이미지 URL"
+
+#: contents/ui/MainPage.qml:1231
+#, kde-format
+msgid "Enable Notifications"
+msgstr "알림 사용"
+
+#: contents/ui/MainPage.qml:1240
+#, kde-format
+msgid "Enable Fallback To Wolfram Alpha Web-Search"
+msgstr "Wolfram Alpha 웹 검색으로 대체 가능"
+
+#: contents/ui/MainPage.qml:1246
+#, kde-format
+msgid "Wolfram Alpha API:"
+msgstr "Wolfram Alpha API:"
+
+#: contents/ui/MainPage.qml:1258
+#, kde-format
+msgid "RJVUY3-T6YLWQVXRR"
+msgstr "RJVUY3-T6YLWQVXRR"
+
+#: contents/ui/MainPage.qml:1265
+#, kde-format
+msgid ""
+"<i>Please Note: Default path is set to /home/$USER/mycroft-core/. Change the "
+"above settings to match your installation</i>"
+msgstr ""
+"<i>참고 사항: 기본 경로는 /home/$USER/mycroft-core로 설정됩니다. 위의 설정을 "
+"설치에 맞게 변경하십시오.</i>"
+
+#: contents/ui/MainPage.qml:1303
+#, kde-format
+msgid "Enable / Disable Dashboard"
+msgstr "대시보드 사용/사용 안 함"
+
+#: contents/ui/MainPage.qml:1323
+#, kde-format
+msgid "Card Settings:"
+msgstr "카드 설정:"
+
+#: contents/ui/MainPage.qml:1329
+#, kde-format
+msgid "Enable / Disable Disclaimer Card"
+msgstr "면책 조항 카드 사용/사용 안 함"
+
+#: contents/ui/MainPage.qml:1335
+#, kde-format
+msgid "Enable / Disable News Card"
+msgstr "뉴스 카드 사용/사용 안 함"
+
+#: contents/ui/MainPage.qml:1341
+#, kde-format
+msgid "Enable / Disable Cryptocurrency Card"
+msgstr "암호 화폐 카드 사용/사용 안 함"
+
+#: contents/ui/MainPage.qml:1404
+#, kde-format
+msgid "Enable / Disable Weather Card"
+msgstr "날씨 카드 사용/사용 안 함"
+
+#: contents/ui/MainPage.qml:1427
+#, kde-format
+msgid "Celcius"
+msgstr "섭씨"
+
+#: contents/ui/MainPage.qml:1435
+#, kde-format
+msgid "Fahrenheit"
+msgstr "화씨"
+
+#: contents/ui/MainPage.qml:1470
+#, kde-format
+msgid "Search Skills"
+msgstr "스킬 검색"
+
+#: contents/ui/MainPage.qml:1488
+#, kde-format
+msgid "Refresh List"
+msgstr "목록 새로 고침"
+
+#: contents/ui/MainPage.qml:1588
+#, kde-format
+msgid "Enter Query or Say 'Hey Mycroft'"
+msgstr "질의를 입력하거나 'Hey Mycroft' 말하기"
+
+#: contents/ui/MsmView.qml:52 contents/ui/MsmView.qml:149
+#: contents/ui/MsmView.qml:165 contents/ui/MsmView.qml:187
+#, kde-format
+msgid "Installed"
+msgstr "설치됨"
+
+#: contents/ui/MsmView.qml:126 contents/ui/MsmView.qml:143
+#: contents/ui/MsmView.qml:160
+#, kde-format
+msgid "Install"
+msgstr "설치"
+
+#: contents/ui/PlacesDelegate.qml:106
+#, kde-format
+msgctxt "mtrs stands for meters"
+msgid "Distance: %1 <i>mtrs</i>"
+msgstr "거리: %1<i>미터</i>"
+
+#: contents/ui/PlacesDelegate.qml:158
+#, kde-format
+msgid "Address: %1"
+msgstr "주소: %1"
+
+#: contents/ui/PlacesDelegate.qml:212
+#, kde-format
+msgid "<i>Powered By: Here.API</i>"
+msgstr "<i>제공: Here.API</i>"
+
+#: contents/ui/PulleyItemDash.qml:116
+#, kde-format
+msgid "Refresh Dashboard"
+msgstr "대시보드 새로 고침"
+
+#: contents/ui/PulleyItemDash.qml:129
+#, kde-format
+msgid "Change Settings"
+msgstr "설정 변경"
+
+#: contents/ui/RecipeDelegate.qml:84
+#, kde-format
+msgid "<i>Calories:</i> %1 <b>cal</b>"
+msgstr "<i>칼로리:</i> %1 <b>cal</b>"
+
+#: contents/ui/RecipeDelegate.qml:95
+#, kde-format
+msgid "<i>Diet Type:</i> %1"
+msgstr "<i>식사 유형:</i> %1"
+
+#: contents/ui/RecipeDelegate.qml:106
+#, kde-format
+msgid "<i>Health Tags:</i> %1"
+msgstr "<i>건강 태그:</i> %1"
+
+#: contents/ui/RecipeDelegate.qml:115
+#, kde-format
+msgid "View Recipe"
+msgstr "요리법 보기"
+
+#: contents/ui/RecipeDelegate.qml:139
+#, kde-format
+msgid "<i>Recipe Source: %1</i>"
+msgstr "<i>요리법 출처: %1</i>"
+
+#: contents/ui/RecipeDelegate.qml:148
+#, kde-format
+msgid "<i>Powered By: Edamam.com</i>"
+msgstr "<i>제공: Edamam.com</i>"
+
+#: contents/ui/RecipeType.qml:148
+#, kde-format
+msgid "Close Ingredients List"
+msgstr "재료 목록 닫기"
+
+#: contents/ui/StackObjDelegate.qml:77
+#, kde-format
+msgid "<i>%1</i>"
+msgstr "<i>%1</i>"
+
+#: contents/ui/StackObjDelegate.qml:106
+#, kde-format
+msgid "Answered"
+msgstr "답변됨"
+
+#: contents/ui/StackObjDelegate.qml:109
+#, kde-format
+msgid "Unanswered"
+msgstr "답변 없음"
+
+#: contents/ui/StackObjDelegate.qml:127
+#, kde-format
+msgid "Replies: %1"
+msgstr "답글: %1"
+
+#: contents/ui/StackObjType.qml:49
+#, kde-format
+msgid "Powered By StackOverflow"
+msgstr "StackOverflow 제공"
+
+#: contents/ui/StockPriceWidget.qml:61
+#, kde-format
+msgid "Stock Price Info"
+msgstr "주가 정보"
+
+#: contents/ui/StockPriceWidget.qml:80
+#, kde-format
+msgid "Text"
+msgstr "텍스트"
+
+#: contents/ui/StockPriceWidget.qml:95
+#, kde-format
+msgid "Stock Price:"
+msgstr "주가:"
+
+#: contents/ui/StockPriceWidget.qml:109
+#, kde-format
+msgid "128.89"
+msgstr "128.89"
+
+#: contents/ui/Suggestions.qml:85
+#, kde-format
+msgid "Ask Another"
+msgstr "다른 질문"
+
+#: contents/ui/Suggestions.qml:226
+#, kde-format
+msgid "Clear"
+msgstr "지우기"
+
+#: contents/ui/TomorrowWeatherType.qml:73
+#, kde-format
+msgid "Low"
+msgstr "낮음"
+
+#: contents/ui/TomorrowWeatherType.qml:87
+#: contents/ui/TomorrowWeatherType.qml:120
+#, kde-format
+msgid "100"
+msgstr "100"
+
+#: contents/ui/TomorrowWeatherType.qml:94
+#: contents/ui/TomorrowWeatherType.qml:140
+#, kde-format
+msgid "°"
+msgstr "°"
+
+#: contents/ui/TomorrowWeatherType.qml:128
+#, kde-format
+msgid "High"
+msgstr "높음"
+
+#: contents/ui/TomorrowWeatherType.qml:153
+#, kde-format
+msgid "Tomorrow's Weather"
+msgstr "내일의 날씨"
+
+#: contents/ui/VideoFileDelegate.qml:105
+#, kde-format
+msgid "Play"
+msgstr "재생"
+
+#: contents/ui/WikiDelegate.qml:88
+#, kde-format
+msgid "Wikipedia"
+msgstr "위키백과"
+
+#: contents/ui/YelpDelegate.qml:83
+#, kde-format
+msgid "<i>Phone:</i> %1"
+msgstr "<i>전화:</i> %1"
+
+#: contents/ui/YelpDelegate.qml:96
+#, kde-format
+msgid "<i>Location:</i> %1"
+msgstr "<i>위치:</i> %1"
+
+#: contents/ui/YelpDelegate.qml:108
+#, kde-format
+msgid "<i>Rating:</i> %1 Stars"
+msgstr "<i>별점:</i> 별 %1개"
+
+#: contents/ui/YelpDelegate.qml:118
+#, kde-format
+msgid "Checkout"
+msgstr "체크아웃"
+
+#: contents/ui/YelpDelegate.qml:129
+#, kde-format
+msgid "Send As Text"
+msgstr "텍스트로 보내기"
+
+#: contents/ui/YelpDelegate.qml:151
+#, kde-format
+msgid "<i>Powered By: Yelp.com</i>"
+msgstr "<i>제공: Yelp.com</i>"

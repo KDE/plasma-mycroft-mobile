@@ -1,0 +1,623 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-mycroft-mobile package.
+#
+# Burkhard Lück <lueck@hube-lueck.de>, 2018, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-mycroft-mobile\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-09 03:48+0200\n"
+"PO-Revision-Date: 2021-04-19 15:22+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
+#, kde-format
+msgid "<i>Location: %1</i>"
+msgstr "<i>Ort: %1</i>"
+
+#: contents/ui/AudioFileDelegate.qml:106
+#, kde-format
+msgid "Listen"
+msgstr ""
+
+#: contents/ui/BookDelegate.qml:135
+#, kde-format
+msgid "Author: %1"
+msgstr "Autor: %1"
+
+#: contents/ui/BookDelegate.qml:141
+#, kde-format
+msgid "Publisher: %1"
+msgstr "Herausgeber: %1"
+
+#: contents/ui/BookDelegate.qml:147
+#, kde-format
+msgid "Release Year: %1"
+msgstr "Veröffentlichungsjahr: %1"
+
+#: contents/ui/BookDelegate.qml:153
+#, kde-format
+msgid "Availability: %1"
+msgstr "Verfügbarkeit: %1"
+
+#: contents/ui/BookDelegate.qml:168
+#, kde-format
+msgid "Read Online"
+msgstr "Online lesen"
+
+#: contents/ui/BookDelegate.qml:179
+#, kde-format
+msgid "Download"
+msgstr "Herunterladen"
+
+#: contents/ui/CurrentWeatherType.qml:191
+#, kde-format
+msgid "Minimum Temperature: %1"
+msgstr "Minimale Temperatur: %1"
+
+#: contents/ui/CurrentWeatherType.qml:219
+#, kde-format
+msgid "Current Temperature: %1"
+msgstr "Aktuelle Temperatur: %1"
+
+#: contents/ui/CurrentWeatherType.qml:247
+#, kde-format
+msgid "Maximum Temperature: %1"
+msgstr "Maximale Temperatur: %1"
+
+#: contents/ui/DashboardDelegate.qml:158
+#, kde-format
+msgid "Share Via Email"
+msgstr "Als E-Mail teilen"
+
+#: contents/ui/DashCryptoDelegate.qml:71
+#, kde-format
+msgid "Currency: %1"
+msgstr "Währung: %1"
+
+#: contents/ui/DashCryptoDelegate.qml:145
+#: contents/ui/DashCryptoDelegate.qml:159
+#: contents/ui/DashCryptoDelegate.qml:173
+#, kde-format
+msgctxt "%1 is the currency symbol, %2 is the current rate"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: contents/ui/DashCryptoDelegate.qml:220 contents/ui/DashNewsDelegate.qml:402
+#: contents/ui/DashWeatherDelegate.qml:733
+#: contents/ui/DisclaimerCardDelegate.qml:191
+#, kde-format
+msgid "Remove Card"
+msgstr "Karte entfernen"
+
+#: contents/ui/DashCryptoDelegate.qml:270
+#, kde-format
+msgid "Disable Cryptocurrency Card"
+msgstr "Kryptowährungs-Karte deaktivieren"
+
+#: contents/ui/DashNewsDelegate.qml:252
+#, kde-format
+msgid "<i>Powered By: NewsAPI</i>"
+msgstr "<i>Unterstützt von: NewsAPI</i>"
+
+#: contents/ui/DashNewsDelegate.qml:296
+#, kde-format
+msgid "Play / Listen To News Article"
+msgstr ""
+
+#: contents/ui/DashNewsDelegate.qml:351
+#, kde-format
+msgid "Share News Link"
+msgstr ""
+
+#: contents/ui/DashNewsDelegate.qml:451
+#, kde-format
+msgid "Disable News Cards"
+msgstr "Neue Karten deaktivieren"
+
+#: contents/ui/DashWeatherDelegate.qml:71
+#, kde-format
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: contents/ui/DashWeatherDelegate.qml:149
+#, kde-format
+msgid "Date: %1 | Time: %2"
+msgstr "Datum: %1 | Zeit: %2"
+
+#: contents/ui/DashWeatherDelegate.qml:174
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Minimum Temperature: %1%2"
+msgstr "Minimale Temperatur: %1 %2"
+
+#: contents/ui/DashWeatherDelegate.qml:199
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Current Temperature: %1%2"
+msgstr "Aktuelle Temperatur: %1 %2"
+
+#: contents/ui/DashWeatherDelegate.qml:224
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Maximum Temperature: %1%2"
+msgstr "Maximale Temperatur: %1 %2"
+
+#: contents/ui/DashWeatherDelegate.qml:263
+#, kde-format
+msgid "Expand Forecast"
+msgstr "Vorhersage erweitern"
+
+#: contents/ui/DashWeatherDelegate.qml:269
+#, kde-format
+msgid "Close"
+msgstr "Schließen"
+
+#: contents/ui/DashWeatherDelegate.qml:438
+#: contents/ui/DashWeatherDelegate.qml:564
+#, kde-format
+msgctxt "D stand for Day, T stands for Time"
+msgid "D: %1 | T: %2"
+msgstr "T: %1 | Z: %2"
+
+#: contents/ui/DashWeatherDelegate.qml:462
+#: contents/ui/DashWeatherDelegate.qml:588
+#, kde-format
+msgid "Condition: %1"
+msgstr "Bedingung: %1"
+
+#: contents/ui/DashWeatherDelegate.qml:495
+#: contents/ui/DashWeatherDelegate.qml:621
+#, kde-format
+msgid "Wind: %1 meters/sec"
+msgstr "Wind: %1 Meter/sec"
+
+#: contents/ui/DashWeatherDelegate.qml:519
+#: contents/ui/DashWeatherDelegate.qml:645
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Min: %1%2"
+msgstr "Min: %1 %2"
+
+#: contents/ui/DashWeatherDelegate.qml:544
+#: contents/ui/DashWeatherDelegate.qml:670
+#, kde-format
+msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
+msgid "Max: %1%2"
+msgstr "Max: %1 %2"
+
+#: contents/ui/DashWeatherDelegate.qml:685
+#, kde-format
+msgid "<i>Powered By: OpenWeatherMap</i>"
+msgstr "<i>Unterstützt von: OpenWeatherMap</i>"
+
+#: contents/ui/DashWeatherDelegate.qml:783
+#, kde-format
+msgid "Disable Weather Cards"
+msgstr "Wetter-Karten deaktivieren"
+
+#: contents/ui/Disclaimer.qml:39 contents/ui/DisclaimerCardDelegate.qml:71
+#, kde-format
+msgid "Let's Continue?"
+msgstr "Fortfahren?"
+
+#: contents/ui/Disclaimer.qml:57
+#, kde-format
+msgid ""
+"Mycroft by default is powered by a cloud-based speech to text service. "
+"Mycroft gives you the ability to change speech to text services or use a "
+"locally configured one within their settings at home.mycroft.ai. If you "
+"agree to the default usage of Mycroft’s speech to text service, please "
+"continue. Also remember you can always choose to turn off or mute Mycroft "
+"when you do not wish to use it."
+msgstr ""
+
+#: contents/ui/Disclaimer.qml:83
+#, kde-format
+msgid "To start using Mycroft toggle the switch in the upper right corner!"
+msgstr ""
+
+#: contents/ui/DisclaimerCardDelegate.qml:146
+#, kde-format
+msgid ""
+"Mycroft by default is powered by a cloud-based speech to text service. "
+"Mycroft gives you the ability to change speech to text services or use a "
+"locally configured one within their settings at home.mycroft.ai."
+msgstr ""
+
+#: contents/ui/DisclaimerCardDelegate.qml:241
+#, kde-format
+msgid "Disable Disclaimer Card"
+msgstr ""
+
+#: contents/ui/DocumentFileDelegate.qml:105
+#, kde-format
+msgid "Open"
+msgstr "Öffnen"
+
+#: contents/ui/ImgRecogType.qml:66
+#, kde-format
+msgid "Broad Recognition"
+msgstr ""
+
+#: contents/ui/ImgRecogType.qml:81
+#, kde-format
+msgid "OCR Recognition"
+msgstr "OCR-Erkennung"
+
+#: contents/ui/main.qml:37
+#, kde-format
+msgid "Mycroft"
+msgstr "Mycroft"
+
+#: contents/ui/MainPage.qml:95
+#, kde-format
+msgid ""
+"I am not connected to the internet, Please check your network connection"
+msgstr ""
+"Keine Verbindung zum Internet, bitte überprüfen Sie Ihre Netzwerkverbindung"
+
+#: contents/ui/MainPage.qml:600
+#, kde-format
+msgid "Home Tab"
+msgstr ""
+
+#: contents/ui/MainPage.qml:613
+#, kde-format
+msgid "Skills Tab"
+msgstr ""
+
+#: contents/ui/MainPage.qml:627
+#, kde-format
+msgid "Settings Tab"
+msgstr "Karteikarte Einstellungen"
+
+#: contents/ui/MainPage.qml:642
+#, kde-format
+msgid "Skill Installs Tab"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1054
+#, kde-format
+msgid "<i>Your Mycroft Core Installation Path</i>"
+msgstr "<i>Installationspfad zum Mycroft-Hauptprogramm</i>"
+
+#: contents/ui/MainPage.qml:1065
+#, kde-format
+msgid "Default Path"
+msgstr "Standardpfad"
+
+#: contents/ui/MainPage.qml:1090
+#, kde-format
+msgid "Installed Using Mycroft Package"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1115
+#, kde-format
+msgid "Location of Mycroft-Core Directory"
+msgstr "Ort des Mycroft-Ordners"
+
+#: contents/ui/MainPage.qml:1144
+#, kde-format
+msgid "<custom location>/mycroft-core/"
+msgstr "<custom location>/mycroft-core/"
+
+#: contents/ui/MainPage.qml:1174 contents/ui/MainPage.qml:1175
+#, kde-format
+msgid "ws://0.0.0.0:8181/core"
+msgstr "ws://0.0.0.0:8181/core"
+
+#: contents/ui/MainPage.qml:1196
+#, kde-format
+msgid "Your Custom Image Recognition Skill Voc Keywords"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1197
+#, kde-format
+msgid "search image url"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1214
+#, kde-format
+msgid "Your Custom Image OCR Skill Voc Keywords"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1215
+#, kde-format
+msgid "ocr image url"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1231
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Benachrichtigungen aktivieren"
+
+#: contents/ui/MainPage.qml:1240
+#, kde-format
+msgid "Enable Fallback To Wolfram Alpha Web-Search"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1246
+#, kde-format
+msgid "Wolfram Alpha API:"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1258
+#, kde-format
+msgid "RJVUY3-T6YLWQVXRR"
+msgstr "RJVUY3-T6YLWQVXRR"
+
+#: contents/ui/MainPage.qml:1265
+#, kde-format
+msgid ""
+"<i>Please Note: Default path is set to /home/$USER/mycroft-core/. Change the "
+"above settings to match your installation</i>"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1303
+#, kde-format
+msgid "Enable / Disable Dashboard"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1323
+#, kde-format
+msgid "Card Settings:"
+msgstr "Karteneinstellungen:"
+
+#: contents/ui/MainPage.qml:1329
+#, kde-format
+msgid "Enable / Disable Disclaimer Card"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1335
+#, kde-format
+msgid "Enable / Disable News Card"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1341
+#, kde-format
+msgid "Enable / Disable Cryptocurrency Card"
+msgstr "Kryptowährungs-Karte aktivieren / deaktivieren"
+
+#: contents/ui/MainPage.qml:1404
+#, kde-format
+msgid "Enable / Disable Weather Card"
+msgstr "Wetter-Karte aktivieren / deaktivieren"
+
+#: contents/ui/MainPage.qml:1427
+#, kde-format
+msgid "Celcius"
+msgstr "Celcius"
+
+#: contents/ui/MainPage.qml:1435
+#, kde-format
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: contents/ui/MainPage.qml:1470
+#, kde-format
+msgid "Search Skills"
+msgstr ""
+
+#: contents/ui/MainPage.qml:1488
+#, kde-format
+msgid "Refresh List"
+msgstr "Liste aktualisieren"
+
+#: contents/ui/MainPage.qml:1588
+#, kde-format
+msgid "Enter Query or Say 'Hey Mycroft'"
+msgstr "Abfrage eingeben oder „Hallo Mycroft“ sagen"
+
+#: contents/ui/MsmView.qml:52 contents/ui/MsmView.qml:149
+#: contents/ui/MsmView.qml:165 contents/ui/MsmView.qml:187
+#, kde-format
+msgid "Installed"
+msgstr "Installiert"
+
+#: contents/ui/MsmView.qml:126 contents/ui/MsmView.qml:143
+#: contents/ui/MsmView.qml:160
+#, kde-format
+msgid "Install"
+msgstr "Installieren"
+
+#: contents/ui/PlacesDelegate.qml:106
+#, kde-format
+msgctxt "mtrs stands for meters"
+msgid "Distance: %1 <i>mtrs</i>"
+msgstr "Entfernung: %1 <i>m</i>"
+
+#: contents/ui/PlacesDelegate.qml:158
+#, kde-format
+msgid "Address: %1"
+msgstr "Adresse: %1"
+
+#: contents/ui/PlacesDelegate.qml:212
+#, kde-format
+msgid "<i>Powered By: Here.API</i>"
+msgstr "<i>Unterstützt von: Here.API</i>"
+
+#: contents/ui/PulleyItemDash.qml:116
+#, kde-format
+msgid "Refresh Dashboard"
+msgstr ""
+
+#: contents/ui/PulleyItemDash.qml:129
+#, kde-format
+msgid "Change Settings"
+msgstr "Einstellungen ändern"
+
+#: contents/ui/RecipeDelegate.qml:84
+#, kde-format
+msgid "<i>Calories:</i> %1 <b>cal</b>"
+msgstr "<i>Kalorien:</i> %1 <b>cal</b>"
+
+#: contents/ui/RecipeDelegate.qml:95
+#, kde-format
+msgid "<i>Diet Type:</i> %1"
+msgstr "<i>Diätart:</i> %1"
+
+#: contents/ui/RecipeDelegate.qml:106
+#, kde-format
+msgid "<i>Health Tags:</i> %1"
+msgstr ""
+
+#: contents/ui/RecipeDelegate.qml:115
+#, kde-format
+msgid "View Recipe"
+msgstr "Rezept-Ansicht"
+
+#: contents/ui/RecipeDelegate.qml:139
+#, kde-format
+msgid "<i>Recipe Source: %1</i>"
+msgstr "<i>Rezeptquelle: %1</i>"
+
+#: contents/ui/RecipeDelegate.qml:148
+#, kde-format
+msgid "<i>Powered By: Edamam.com</i>"
+msgstr "<i>Unterstützt von: Edamam.com</i>"
+
+#: contents/ui/RecipeType.qml:148
+#, kde-format
+msgid "Close Ingredients List"
+msgstr "Zutatenliste schließen"
+
+#: contents/ui/StackObjDelegate.qml:77
+#, kde-format
+msgid "<i>%1</i>"
+msgstr "<i>%1</i>"
+
+#: contents/ui/StackObjDelegate.qml:106
+#, kde-format
+msgid "Answered"
+msgstr "Beantwortet"
+
+#: contents/ui/StackObjDelegate.qml:109
+#, kde-format
+msgid "Unanswered"
+msgstr "Unbeantwortet"
+
+#: contents/ui/StackObjDelegate.qml:127
+#, kde-format
+msgid "Replies: %1"
+msgstr "Antworten: %1"
+
+#: contents/ui/StackObjType.qml:49
+#, kde-format
+msgid "Powered By StackOverflow"
+msgstr "Unterstützt von StackOverflow"
+
+#: contents/ui/StockPriceWidget.qml:61
+#, kde-format
+msgid "Stock Price Info"
+msgstr ""
+
+#: contents/ui/StockPriceWidget.qml:80
+#, kde-format
+msgid "Text"
+msgstr "Text"
+
+#: contents/ui/StockPriceWidget.qml:95
+#, kde-format
+msgid "Stock Price:"
+msgstr ""
+
+#: contents/ui/StockPriceWidget.qml:109
+#, kde-format
+msgid "128.89"
+msgstr "128.89"
+
+#: contents/ui/Suggestions.qml:85
+#, kde-format
+msgid "Ask Another"
+msgstr ""
+
+#: contents/ui/Suggestions.qml:226
+#, kde-format
+msgid "Clear"
+msgstr "Leeren"
+
+#: contents/ui/TomorrowWeatherType.qml:73
+#, kde-format
+msgid "Low"
+msgstr "Niedrig"
+
+#: contents/ui/TomorrowWeatherType.qml:87
+#: contents/ui/TomorrowWeatherType.qml:120
+#, kde-format
+msgid "100"
+msgstr "100"
+
+#: contents/ui/TomorrowWeatherType.qml:94
+#: contents/ui/TomorrowWeatherType.qml:140
+#, kde-format
+msgid "°"
+msgstr "°"
+
+#: contents/ui/TomorrowWeatherType.qml:128
+#, kde-format
+msgid "High"
+msgstr "Hoch"
+
+#: contents/ui/TomorrowWeatherType.qml:153
+#, kde-format
+msgid "Tomorrow's Weather"
+msgstr "Wetter von Morgen"
+
+#: contents/ui/VideoFileDelegate.qml:105
+#, kde-format
+msgid "Play"
+msgstr "Wiedergabe"
+
+#: contents/ui/WikiDelegate.qml:88
+#, kde-format
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+#: contents/ui/YelpDelegate.qml:83
+#, kde-format
+msgid "<i>Phone:</i> %1"
+msgstr "<i>Telefon:</i> %1"
+
+#: contents/ui/YelpDelegate.qml:96
+#, kde-format
+msgid "<i>Location:</i> %1"
+msgstr "<i>Ort:</i> %1"
+
+#: contents/ui/YelpDelegate.qml:108
+#, kde-format
+msgid "<i>Rating:</i> %1 Stars"
+msgstr "<i>Bewertung:</i> %1 Sterne"
+
+#: contents/ui/YelpDelegate.qml:118
+#, kde-format
+msgid "Checkout"
+msgstr ""
+
+#: contents/ui/YelpDelegate.qml:129
+#, kde-format
+msgid "Send As Text"
+msgstr "Als Text senden"
+
+#: contents/ui/YelpDelegate.qml:151
+#, kde-format
+msgid "<i>Powered By: Yelp.com</i>"
+msgstr "<i>Unterstützt von: Yelp.com</i>"
+
+#~ msgid " : "
+#~ msgstr " : "
+
+#~ msgid " | "
+#~ msgstr " | "
+
+#~ msgid "Date: "
+#~ msgstr "Datum:"
+
+#~ msgid "Wind: "
+#~ msgstr "Wind: "
