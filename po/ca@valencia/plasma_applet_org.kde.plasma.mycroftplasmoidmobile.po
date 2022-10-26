@@ -345,7 +345,7 @@ msgstr "URL de busca de la imatge"
 #, kde-format
 msgid "Your Custom Image OCR Skill Voc Keywords"
 msgstr ""
-"Paraules clau personalitzades de vocals per a les habilitats en l'OCR de les "
+"Paraules clau personalitzades de vocals per a les habilitats en OCR de les "
 "imatges"
 
 #: contents/ui/MainPage.qml:1215
