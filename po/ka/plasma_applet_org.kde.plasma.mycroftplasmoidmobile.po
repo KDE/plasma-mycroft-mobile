@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2022-09-25 16:40+0200\n"
+"PO-Revision-Date: 2022-11-28 09:40+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
 #, kde-format
@@ -224,6 +224,8 @@ msgstr ""
 #, kde-format
 msgid "To start using Mycroft toggle the switch in the upper right corner!"
 msgstr ""
+"Mycroft -ის გამოყენებით დასაწყებად გადართეთ გადასართველი ზედა მარჯვენა "
+"კუთხეში!"
 
 #: contents/ui/DisclaimerCardDelegate.qml:146
 #, kde-format
@@ -246,7 +248,7 @@ msgstr "გახსნა"
 #: contents/ui/ImgRecogType.qml:66
 #, kde-format
 msgid "Broad Recognition"
-msgstr ""
+msgstr "ფართო აღიარება"
 
 #: contents/ui/ImgRecogType.qml:81
 #, kde-format
@@ -262,7 +264,7 @@ msgstr "Mycroft"
 #, kde-format
 msgid ""
 "I am not connected to the internet, Please check your network connection"
-msgstr ""
+msgstr "ინტერნეტი არ მაქვს. შეამოწმეთ ინტერნეტკავშირი"
 
 #: contents/ui/MainPage.qml:600
 #, kde-format
@@ -287,7 +289,7 @@ msgstr "ცოდნის დაყენებების ჩანართ�
 #: contents/ui/MainPage.qml:1054
 #, kde-format
 msgid "<i>Your Mycroft Core Installation Path</i>"
-msgstr ""
+msgstr "<i>Mycroft -ის ბირთვის დაყენების ბილიკი</i>"
 
 #: contents/ui/MainPage.qml:1065
 #, kde-format
@@ -297,12 +299,12 @@ msgstr "ნაგულისხმები ბილიკი"
 #: contents/ui/MainPage.qml:1090
 #, kde-format
 msgid "Installed Using Mycroft Package"
-msgstr ""
+msgstr "დაყენებულია MyCroft-ის პაკეტით"
 
 #: contents/ui/MainPage.qml:1115
 #, kde-format
 msgid "Location of Mycroft-Core Directory"
-msgstr ""
+msgstr "Mycroft-Core საქაღალდის მდებარეობა"
 
 #: contents/ui/MainPage.qml:1144
 #, kde-format
@@ -322,7 +324,7 @@ msgstr ""
 #: contents/ui/MainPage.qml:1197
 #, kde-format
 msgid "search image url"
-msgstr ""
+msgstr "გამოსახულების ძებნის ბმული"
 
 #: contents/ui/MainPage.qml:1214
 #, kde-format
@@ -332,7 +334,7 @@ msgstr ""
 #: contents/ui/MainPage.qml:1215
 #, kde-format
 msgid "ocr image url"
-msgstr ""
+msgstr "ocr გამოსახულების ბმული"
 
 #: contents/ui/MainPage.qml:1231
 #, kde-format
@@ -342,7 +344,7 @@ msgstr "გაფრთხილებების ჩართვა"
 #: contents/ui/MainPage.qml:1240
 #, kde-format
 msgid "Enable Fallback To Wolfram Alpha Web-Search"
-msgstr ""
+msgstr "Wolfram Alpha-ზე გადართვა შეცდომის შემთხვევაში"
 
 #: contents/ui/MainPage.qml:1246
 #, kde-format
@@ -364,7 +366,7 @@ msgstr ""
 #: contents/ui/MainPage.qml:1303
 #, kde-format
 msgid "Enable / Disable Dashboard"
-msgstr ""
+msgstr "სამუშაო მაგიდის ჩართვა/გამორთვა"
 
 #: contents/ui/MainPage.qml:1323
 #, kde-format
@@ -517,7 +519,7 @@ msgstr "იყენებს StackOverflow"
 #: contents/ui/StockPriceWidget.qml:61
 #, kde-format
 msgid "Stock Price Info"
-msgstr ""
+msgstr "ძირითადი ფასის ინფორმაცია"
 
 #: contents/ui/StockPriceWidget.qml:80
 #, kde-format
@@ -527,7 +529,7 @@ msgstr "ტექსტი"
 #: contents/ui/StockPriceWidget.qml:95
 #, kde-format
 msgid "Stock Price:"
-msgstr ""
+msgstr "ძირითადი ფასი:"
 
 #: contents/ui/StockPriceWidget.qml:109
 #, kde-format
@@ -594,7 +596,7 @@ msgstr "<i>მდებარეობა:</i> %1"
 #: contents/ui/YelpDelegate.qml:108
 #, kde-format
 msgid "<i>Rating:</i> %1 Stars"
-msgstr ""
+msgstr "<i>რეიტინგი:</i> %1 ვარსკვლავი"
 
 #: contents/ui/YelpDelegate.qml:118
 #, kde-format
