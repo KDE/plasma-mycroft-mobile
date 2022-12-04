@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2022-11-28 09:40+0100\n"
+"PO-Revision-Date: 2022-12-03 14:20+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
 #, kde-format
@@ -362,6 +362,8 @@ msgid ""
 "<i>Please Note: Default path is set to /home/$USER/mycroft-core/. Change the "
 "above settings to match your installation</i>"
 msgstr ""
+"<i>დაიმახსოვრეთ: ნაგულისხმები ბილიკი დაყენებულია მნიშვნელობაზე /home/$USER/"
+"mycroft-core/. შეცვალეთ პარამეტრები, რომ თქვენს სისტემას მოარგოთ</i>"
 
 #: contents/ui/MainPage.qml:1303
 #, kde-format
