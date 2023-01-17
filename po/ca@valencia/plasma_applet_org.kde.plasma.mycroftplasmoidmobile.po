@@ -390,7 +390,7 @@ msgstr "Activa/desactiva el tauler"
 #: contents/ui/MainPage.qml:1323
 #, kde-format
 msgid "Card Settings:"
-msgstr "Configuració de la targeta:"
+msgstr "Configureu la targeta:"
 
 #: contents/ui/MainPage.qml:1329
 #, kde-format
