@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-mycroft-mobile package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2022-02-27 14:06+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2023-02-01 00:30+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
 #, kde-format
@@ -291,12 +292,12 @@ msgstr "Ayarlar Sekmesi"
 #: contents/ui/MainPage.qml:642
 #, kde-format
 msgid "Skill Installs Tab"
-msgstr "Yetenek Yüklemeleri Sekmesi"
+msgstr "Yetenek Kurulumları Sekmesi"
 
 #: contents/ui/MainPage.qml:1054
 #, kde-format
 msgid "<i>Your Mycroft Core Installation Path</i>"
-msgstr "<i>Mycroft Çekirdek Yükleme Yolunuz</i>"
+msgstr "<i>Mycroft Çekirdek Kurulum Yolunuz</i>"
 
 #: contents/ui/MainPage.qml:1065
 #, kde-format
@@ -306,7 +307,7 @@ msgstr "Öntanımlı Yol"
 #: contents/ui/MainPage.qml:1090
 #, kde-format
 msgid "Installed Using Mycroft Package"
-msgstr "Mycroft Paketi Kullanılarak Yüklendi"
+msgstr "Mycroft Paketi Kullanılarak Kuruldu"
 
 #: contents/ui/MainPage.qml:1115
 #, kde-format
@@ -370,7 +371,7 @@ msgid ""
 "above settings to match your installation</i>"
 msgstr ""
 "<i>Önemli: Öntanımlı yol /ev/$USER/mycroft-core/ olarak ayarlıdır. "
-"Yukarıdaki ayarları yüklemenizle eşleşecek biçimde değiştirin</i>"
+"Yukarıdaki ayarları kurulumunuzla eşleşecek biçimde değiştirin</i>"
 
 #: contents/ui/MainPage.qml:1303
 #, kde-format
