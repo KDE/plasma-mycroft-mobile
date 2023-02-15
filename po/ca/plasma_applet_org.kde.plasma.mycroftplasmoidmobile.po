@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.mycroftplasmoidmobile.po to Catalan
-# Copyright (C) 2017-2022 This_file_is_part_of_KDE
+# Copyright (C) 2017-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2018, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2018, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2017, 2018, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2022-07-08 14:53+0200\n"
+"PO-Revision-Date: 2023-02-14 14:52+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -134,7 +134,7 @@ msgstr "%1 | %2"
 #: contents/ui/DashWeatherDelegate.qml:149
 #, kde-format
 msgid "Date: %1 | Time: %2"
-msgstr "Data: %1 | Temps: %2"
+msgstr "Data: %1 | Hora: %2"
 
 #: contents/ui/DashWeatherDelegate.qml:174
 #, kde-format
@@ -631,107 +631,3 @@ msgstr "Envia com a text"
 #, kde-format
 msgid "<i>Powered By: Yelp.com</i>"
 msgstr "<i>Desenvolupat per: Yelp.com</i>"
-
-#~ msgid "Remove"
-#~ msgstr "Elimina"
-
-#~| msgid "Search Skills"
-#~ msgid "Search Online"
-#~ msgstr "Cerca en línia"
-
-#~ msgid "Wind | %1 meters/sec"
-#~ msgstr "Vent | %1 metres/seg"
-
-#~ msgid "<b>Disabled</b>"
-#~ msgstr "<b>Desactivat</b>"
-
-#~ msgid "Reconnect"
-#~ msgstr "Reconnecta"
-
-#~ msgid "<b>Starting up..please wait</b>"
-#~ msgstr "<b>S'està iniciant, espereu si us plau</b>"
-
-#~ msgid "Toggle Mic"
-#~ msgstr "Commuta el micròfon"
-
-#~ msgid "<b>Connected</b>"
-#~ msgstr "<b>Connectat</b>"
-
-#~ msgid "Ready..Let's Talk"
-#~ msgstr "Llest... Parlem"
-
-#~ msgid "<b>Connection error</b>"
-#~ msgstr "<b>Error de connexió</b>"
-
-#~ msgid "<b>Shutting down</b>"
-#~ msgstr "<b>S'està tancant</b>"
-
-#~ msgid "Conversation"
-#~ msgstr "Conversa"
-
-#~ msgid "Hints/Tips"
-#~ msgstr "Consells"
-
-#~ msgid "Skill Browser"
-#~ msgstr "Mata el navegador"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Selected CryptoCurrency:"
-#~ msgstr "Criptomoneda seleccionada:"
-
-#~ msgid "Version: %1"
-#~ msgstr "Versió: %1"
-
-#~ msgid "Uninstall"
-#~ msgstr "Desinstal·la"
-
-#~ msgid "Update"
-#~ msgstr "Actualitza"
-
-#~ msgid "Readme"
-#~ msgstr "Llegeix-me"
-
-#~ msgid "Configure"
-#~ msgstr "Configura"
-
-#~ msgid "Stop"
-#~ msgstr "Atura"
-
-# skip-rule: t-sp_2p
-#~ msgid " : "
-#~ msgstr " : "
-
-#~ msgid " | "
-#~ msgstr " | "
-
-#~ msgid "Wind | "
-#~ msgstr "Vent | "
-
-#~ msgid "Date: "
-#~ msgstr "Data: "
-
-#~ msgid "D: "
-#~ msgstr "D: "
-
-#~ msgid "Wind: "
-#~ msgstr "Vent: "
-
-#~ msgid "<b>Ready</b>"
-#~ msgstr "<b>Llest</b>"
-
-#~ msgid "USD: $"
-#~ msgstr "USD: $"
-
-#~ msgid "GBP: £"
-#~ msgstr "GBP: £"
-
-#~ msgid "EURO: €"
-#~ msgstr "EURO: €"
-
-#~ msgid "Mycroft is Disabled"
-#~ msgstr "El Mycroft està desactivat"
-
-#~ msgid "Farahanite"
-#~ msgstr "Fahrenheit"
