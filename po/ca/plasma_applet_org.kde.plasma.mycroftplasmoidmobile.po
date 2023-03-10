@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2023-02-14 14:52+0100\n"
+"PO-Revision-Date: 2023-03-09 14:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -620,7 +620,7 @@ msgstr "<i>Valoració:</i> %1 estrelles"
 #: contents/ui/YelpDelegate.qml:118
 #, kde-format
 msgid "Checkout"
-msgstr "Obtén"
+msgstr "Extreu"
 
 #: contents/ui/YelpDelegate.qml:129
 #, kde-format
