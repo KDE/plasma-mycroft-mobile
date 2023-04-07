@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-mycroft-mobile package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021.
+# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2020-05-09 03:48+0200\n"
-"PO-Revision-Date: 2021-03-01 12:12+0100\n"
+"PO-Revision-Date: 2023-04-06 11:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
 #, kde-format
@@ -531,7 +531,7 @@ msgstr ""
 #: contents/ui/StockPriceWidget.qml:109
 #, kde-format
 msgid "128.89"
-msgstr ""
+msgstr "128.89"
 
 #: contents/ui/Suggestions.qml:85
 #, kde-format
