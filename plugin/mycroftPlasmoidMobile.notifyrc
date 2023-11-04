@@ -32,7 +32,6 @@ Comment[sl]=Mycroft Plasmoid Mobile
 Comment[sv]=Mycroft Plasmoid för mobil
 Comment[tr]=Mycroft Plasmoid Mobile
 Comment[uk]=Мобільний плазмоїд Mycroft
-Comment[x-test]=xxMycroft Plasmoid Mobilexx
 Comment[zh_CN]=Mycroft Plasmoid Mobile
 
 [Event/MycroftResponse]
@@ -70,7 +69,6 @@ Name[sv]=Mycroft svar
 Name[tg]=Посухи Mycroft
 Name[tr]=Mycroft Yanıtı
 Name[uk]=Відповідь Mycroft
-Name[x-test]=xxMycroft Responsexx
 Name[zh_CN]=Mycroft 响应
 Name[zh_TW]=Mycroft 回應
 Comment=Connection to device failed
@@ -107,7 +105,6 @@ Comment[sv]=Anslutning till enhet misslyckades
 Comment[tg]=Пайвастшавӣ ба дастгоҳ қатъ шуд
 Comment[tr]=Aygıt bağlantısı başarısız
 Comment[uk]=Не вдалося встановити з’єднання із пристроєм
-Comment[x-test]=xxConnection to device failedxx
 Comment[zh_CN]=设备连接失败
 Comment[zh_TW]=連線裝置失敗
 Icon=mycroft-plasma-appicon
