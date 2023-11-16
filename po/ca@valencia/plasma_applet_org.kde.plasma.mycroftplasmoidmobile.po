@@ -385,7 +385,7 @@ msgstr ""
 #: contents/ui/MainPage.qml:1303
 #, kde-format
 msgid "Enable / Disable Dashboard"
-msgstr "Activa/desactiva el tauler"
+msgstr "Activa o desactiva el tauler"
 
 #: contents/ui/MainPage.qml:1323
 #, kde-format
@@ -395,22 +395,22 @@ msgstr "Configureu la targeta:"
 #: contents/ui/MainPage.qml:1329
 #, kde-format
 msgid "Enable / Disable Disclaimer Card"
-msgstr "Activa/desactiva la targeta d'exempció de responsabilitat"
+msgstr "Activa o desactiva la targeta d'exempció de responsabilitat"
 
 #: contents/ui/MainPage.qml:1335
 #, kde-format
 msgid "Enable / Disable News Card"
-msgstr "Activa/desactiva la targeta de notícies"
+msgstr "Activa o desactiva la targeta de notícies"
 
 #: contents/ui/MainPage.qml:1341
 #, kde-format
 msgid "Enable / Disable Cryptocurrency Card"
-msgstr "Activa/desactiva la targeta de criptomonedes"
+msgstr "Activa o desactiva la targeta de criptomonedes"
 
 #: contents/ui/MainPage.qml:1404
 #, kde-format
 msgid "Enable / Disable Weather Card"
-msgstr "Activa/desactiva la targeta de temps"
+msgstr "Activa o desactiva la targeta de temps"
 
 #: contents/ui/MainPage.qml:1427
 #, kde-format
