@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:36+0000\n"
-"PO-Revision-Date: 2023-11-25 02:30\n"
+"PO-Revision-Date: 2023-12-09 09:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -272,22 +272,22 @@ msgstr "我尚未连接到互联网，请检查您的网络连接"
 #: contents/ui/MainPage.qml:600
 #, kde-format
 msgid "Home Tab"
-msgstr "主页选项卡"
+msgstr "主页标签页"
 
 #: contents/ui/MainPage.qml:613
 #, kde-format
 msgid "Skills Tab"
-msgstr "功能选项卡"
+msgstr "功能标签页"
 
 #: contents/ui/MainPage.qml:627
 #, kde-format
 msgid "Settings Tab"
-msgstr "设置选项卡"
+msgstr "设置标签页"
 
 #: contents/ui/MainPage.qml:642
 #, kde-format
 msgid "Skill Installs Tab"
-msgstr "功能安装选项卡"
+msgstr "功能安装标签页"
 
 #: contents/ui/MainPage.qml:1054
 #, kde-format
