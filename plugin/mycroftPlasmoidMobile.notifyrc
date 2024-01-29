@@ -34,6 +34,7 @@ Comment[tr]=Mycroft Plasmoid Mobile
 Comment[uk]=Мобільний плазмоїд Mycroft
 Comment[x-test]=xxMycroft Plasmoid Mobilexx
 Comment[zh_CN]=Mycroft Plasmoid Mobile
+Comment[zh_TW]=Mycroft Plasma 行動元件
 
 [Event/MycroftResponse]
 Name=Mycroft Response
