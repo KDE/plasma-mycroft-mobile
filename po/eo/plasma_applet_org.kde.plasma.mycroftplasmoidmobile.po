@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-mycroft-mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:36+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -21,12 +21,12 @@ msgstr ""
 #: contents/ui/AudioFileDelegate.qml:94 contents/ui/VideoFileDelegate.qml:93
 #, kde-format
 msgid "<i>Location: %1</i>"
-msgstr ""
+msgstr "<i>Loko: %1</i>"
 
 #: contents/ui/AudioFileDelegate.qml:106
 #, kde-format
 msgid "Listen"
-msgstr ""
+msgstr "Aŭskulti"
 
 #: contents/ui/BookDelegate.qml:135
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Aŭtoro: %1"
 #: contents/ui/BookDelegate.qml:141
 #, kde-format
 msgid "Publisher: %1"
-msgstr ""
+msgstr "Eldoninto: %1"
 
 #: contents/ui/BookDelegate.qml:147
 #, kde-format
@@ -46,12 +46,12 @@ msgstr "Eldonjaro: %1"
 #: contents/ui/BookDelegate.qml:153
 #, kde-format
 msgid "Availability: %1"
-msgstr ""
+msgstr "Havebleco: %1"
 
 #: contents/ui/BookDelegate.qml:168
 #, kde-format
 msgid "Read Online"
-msgstr ""
+msgstr "Legi Interrete"
 
 #: contents/ui/BookDelegate.qml:179
 #, kde-format
@@ -61,22 +61,22 @@ msgstr "Elŝuti"
 #: contents/ui/CurrentWeatherType.qml:191
 #, kde-format
 msgid "Minimum Temperature: %1"
-msgstr ""
+msgstr "Minimuma Temperaturo: %1"
 
 #: contents/ui/CurrentWeatherType.qml:219
 #, kde-format
 msgid "Current Temperature: %1"
-msgstr ""
+msgstr "Nuna Temperaturo: %1"
 
 #: contents/ui/CurrentWeatherType.qml:247
 #, kde-format
 msgid "Maximum Temperature: %1"
-msgstr ""
+msgstr "Maksimuma Temperaturo: %1"
 
 #: contents/ui/DashboardDelegate.qml:158
 #, kde-format
 msgid "Share Via Email"
-msgstr ""
+msgstr "Kunhavigi Per Retpoŝto"
 
 #: contents/ui/DashCryptoDelegate.qml:71
 #, kde-format
@@ -96,32 +96,32 @@ msgstr "%1: %2"
 #: contents/ui/DisclaimerCardDelegate.qml:191
 #, kde-format
 msgid "Remove Card"
-msgstr ""
+msgstr "Forigi Karton"
 
 #: contents/ui/DashCryptoDelegate.qml:270
 #, kde-format
 msgid "Disable Cryptocurrency Card"
-msgstr ""
+msgstr "Malebligi Kriptmonan Karton"
 
 #: contents/ui/DashNewsDelegate.qml:252
 #, kde-format
 msgid "<i>Powered By: NewsAPI</i>"
-msgstr ""
+msgstr "<i>Funkciita de: NewsAPI</i>"
 
 #: contents/ui/DashNewsDelegate.qml:296
 #, kde-format
 msgid "Play / Listen To News Article"
-msgstr ""
+msgstr "Ludi / Aŭskulti Novaĵojn"
 
 #: contents/ui/DashNewsDelegate.qml:351
 #, kde-format
 msgid "Share News Link"
-msgstr ""
+msgstr "Kunhavigi Novaĵojn Ligon"
 
 #: contents/ui/DashNewsDelegate.qml:451
 #, kde-format
 msgid "Disable News Cards"
-msgstr ""
+msgstr "Malebligi Novaĵkartojn"
 
 #: contents/ui/DashWeatherDelegate.qml:71
 #, kde-format
@@ -131,30 +131,30 @@ msgstr "%1 | %2"
 #: contents/ui/DashWeatherDelegate.qml:149
 #, kde-format
 msgid "Date: %1 | Time: %2"
-msgstr ""
+msgstr "Dato: %1 | Tempo: %2"
 
 #: contents/ui/DashWeatherDelegate.qml:174
 #, kde-format
 msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
 msgid "Minimum Temperature: %1%2"
-msgstr ""
+msgstr "Minimuma Temperaturo: %1%2"
 
 #: contents/ui/DashWeatherDelegate.qml:199
 #, kde-format
 msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
 msgid "Current Temperature: %1%2"
-msgstr ""
+msgstr "Nuna Temperaturo: %1%2"
 
 #: contents/ui/DashWeatherDelegate.qml:224
 #, kde-format
 msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
 msgid "Maximum Temperature: %1%2"
-msgstr ""
+msgstr "Maksimuma Temperaturo: %1%2"
 
 #: contents/ui/DashWeatherDelegate.qml:263
 #, kde-format
 msgid "Expand Forecast"
-msgstr ""
+msgstr "Vastigi Prognozon"
 
 #: contents/ui/DashWeatherDelegate.qml:269
 #, kde-format
@@ -166,48 +166,48 @@ msgstr "Fermi"
 #, kde-format
 msgctxt "D stand for Day, T stands for Time"
 msgid "D: %1 | T: %2"
-msgstr ""
+msgstr "D: %1 | T: %2"
 
 #: contents/ui/DashWeatherDelegate.qml:462
 #: contents/ui/DashWeatherDelegate.qml:588
 #, kde-format
 msgid "Condition: %1"
-msgstr ""
+msgstr "Kondiĉo: %1"
 
 #: contents/ui/DashWeatherDelegate.qml:495
 #: contents/ui/DashWeatherDelegate.qml:621
 #, kde-format
 msgid "Wind: %1 meters/sec"
-msgstr ""
+msgstr "Vento: %1 metroj/sek"
 
 #: contents/ui/DashWeatherDelegate.qml:519
 #: contents/ui/DashWeatherDelegate.qml:645
 #, kde-format
 msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
 msgid "Min: %1%2"
-msgstr ""
+msgstr "Min: %1%2"
 
 #: contents/ui/DashWeatherDelegate.qml:544
 #: contents/ui/DashWeatherDelegate.qml:670
 #, kde-format
 msgctxt "%1 is value, %2 is unit (Celsius or Fahrenheit degree)"
 msgid "Max: %1%2"
-msgstr ""
+msgstr "Maksimumo: %1%2"
 
 #: contents/ui/DashWeatherDelegate.qml:685
 #, kde-format
 msgid "<i>Powered By: OpenWeatherMap</i>"
-msgstr ""
+msgstr "<i>Funkciita de: OpenWeatherMap</i>"
 
 #: contents/ui/DashWeatherDelegate.qml:783
 #, kde-format
 msgid "Disable Weather Cards"
-msgstr ""
+msgstr "Malebligi Veterkartojn"
 
 #: contents/ui/Disclaimer.qml:39 contents/ui/DisclaimerCardDelegate.qml:71
 #, kde-format
 msgid "Let's Continue?"
-msgstr ""
+msgstr "Ni Daŭru?"
 
 #: contents/ui/Disclaimer.qml:57
 #, kde-format
@@ -223,7 +223,7 @@ msgstr ""
 #: contents/ui/Disclaimer.qml:83
 #, kde-format
 msgid "To start using Mycroft toggle the switch in the upper right corner!"
-msgstr ""
+msgstr "Por komenci uzi Mycroft, ŝaltu la ŝaltilon en la supra dekstra angulo!"
 
 #: contents/ui/DisclaimerCardDelegate.qml:146
 #, kde-format
@@ -236,7 +236,7 @@ msgstr ""
 #: contents/ui/DisclaimerCardDelegate.qml:241
 #, kde-format
 msgid "Disable Disclaimer Card"
-msgstr ""
+msgstr "Malebligi Malgarantio-Karton"
 
 #: contents/ui/DocumentFileDelegate.qml:105
 #, kde-format
@@ -246,17 +246,17 @@ msgstr "Malfermi"
 #: contents/ui/ImgRecogType.qml:66
 #, kde-format
 msgid "Broad Recognition"
-msgstr ""
+msgstr "Larĝa Rekono"
 
 #: contents/ui/ImgRecogType.qml:81
 #, kde-format
 msgid "OCR Recognition"
-msgstr ""
+msgstr "OCR-Rekono"
 
 #: contents/ui/main.qml:37
 #, kde-format
 msgid "Mycroft"
-msgstr ""
+msgstr "Mycroft"
 
 #: contents/ui/MainPage.qml:95
 #, kde-format
@@ -267,72 +267,72 @@ msgstr ""
 #: contents/ui/MainPage.qml:600
 #, kde-format
 msgid "Home Tab"
-msgstr ""
+msgstr "Hejma Tab"
 
 #: contents/ui/MainPage.qml:613
 #, kde-format
 msgid "Skills Tab"
-msgstr ""
+msgstr "Kapabloj Tab"
 
 #: contents/ui/MainPage.qml:627
 #, kde-format
 msgid "Settings Tab"
-msgstr ""
+msgstr "Agordoj Tab"
 
 #: contents/ui/MainPage.qml:642
 #, kde-format
 msgid "Skill Installs Tab"
-msgstr ""
+msgstr "Tabeto de Kapablaj Instalaĵoj"
 
 #: contents/ui/MainPage.qml:1054
 #, kde-format
 msgid "<i>Your Mycroft Core Installation Path</i>"
-msgstr ""
+msgstr "<i>Via Mycroft Core Instala Vojo</i>"
 
 #: contents/ui/MainPage.qml:1065
 #, kde-format
 msgid "Default Path"
-msgstr ""
+msgstr "Defaŭlta Vojo"
 
 #: contents/ui/MainPage.qml:1090
 #, kde-format
 msgid "Installed Using Mycroft Package"
-msgstr ""
+msgstr "Instalita Per Mycroft-Pako"
 
 #: contents/ui/MainPage.qml:1115
 #, kde-format
 msgid "Location of Mycroft-Core Directory"
-msgstr ""
+msgstr "Loko de Mycroft-Core Directory"
 
 #: contents/ui/MainPage.qml:1144
 #, kde-format
 msgid "<custom location>/mycroft-core/"
-msgstr ""
+msgstr "<propra loko>/mycroft-core/"
 
 #: contents/ui/MainPage.qml:1174 contents/ui/MainPage.qml:1175
 #, kde-format
 msgid "ws://0.0.0.0:8181/core"
-msgstr ""
+msgstr "ws://0.0.0.0:8181/core"
 
 #: contents/ui/MainPage.qml:1196
 #, kde-format
 msgid "Your Custom Image Recognition Skill Voc Keywords"
-msgstr ""
+msgstr "Via Propra Bilda Rekono Kapablo Voc Ŝlosilvortoj"
 
 #: contents/ui/MainPage.qml:1197
 #, kde-format
 msgid "search image url"
-msgstr ""
+msgstr "serĉi bildo url"
 
 #: contents/ui/MainPage.qml:1214
 #, kde-format
 msgid "Your Custom Image OCR Skill Voc Keywords"
-msgstr ""
+msgstr "Via Propra Bildo OCR Kapablo Voc Ŝlosilvortoj"
 
 #: contents/ui/MainPage.qml:1215
 #, kde-format
 msgid "ocr image url"
-msgstr ""
+msgstr "ocr bildo url"
 
 #: contents/ui/MainPage.qml:1231
 #, kde-format
@@ -342,17 +342,17 @@ msgstr "Ebligi Sciigojn"
 #: contents/ui/MainPage.qml:1240
 #, kde-format
 msgid "Enable Fallback To Wolfram Alpha Web-Search"
-msgstr ""
+msgstr "Ebligi Fallback al Wolfram Alpha Web-Search"
 
 #: contents/ui/MainPage.qml:1246
 #, kde-format
 msgid "Wolfram Alpha API:"
-msgstr ""
+msgstr "Wolfram Alpha API:"
 
 #: contents/ui/MainPage.qml:1258
 #, kde-format
 msgid "RJVUY3-T6YLWQVXRR"
-msgstr ""
+msgstr "RJVUY3-T6YLWQVXRR"
 
 #: contents/ui/MainPage.qml:1265
 #, kde-format
@@ -364,37 +364,37 @@ msgstr ""
 #: contents/ui/MainPage.qml:1303
 #, kde-format
 msgid "Enable / Disable Dashboard"
-msgstr ""
+msgstr "Ebligi / Malebligi Instrumentpanelon"
 
 #: contents/ui/MainPage.qml:1323
 #, kde-format
 msgid "Card Settings:"
-msgstr ""
+msgstr "Kartaj Agordoj:"
 
 #: contents/ui/MainPage.qml:1329
 #, kde-format
 msgid "Enable / Disable Disclaimer Card"
-msgstr ""
+msgstr "Ebligi / Malebligi Malgarantio-Karton"
 
 #: contents/ui/MainPage.qml:1335
 #, kde-format
 msgid "Enable / Disable News Card"
-msgstr ""
+msgstr "Ebligi / Malebligi Novaĵkarton"
 
 #: contents/ui/MainPage.qml:1341
 #, kde-format
 msgid "Enable / Disable Cryptocurrency Card"
-msgstr ""
+msgstr "Ebligi / Malebligi Kriptan Moneran Karton"
 
 #: contents/ui/MainPage.qml:1404
 #, kde-format
 msgid "Enable / Disable Weather Card"
-msgstr ""
+msgstr "Ebligi / Malebligi Veterkarton"
 
 #: contents/ui/MainPage.qml:1427
 #, kde-format
 msgid "Celcius"
-msgstr ""
+msgstr "Celsius"
 
 #: contents/ui/MainPage.qml:1435
 #, kde-format
@@ -404,7 +404,7 @@ msgstr "Fahrenheit"
 #: contents/ui/MainPage.qml:1470
 #, kde-format
 msgid "Search Skills"
-msgstr ""
+msgstr "Serĉaj Kapabloj"
 
 #: contents/ui/MainPage.qml:1488
 #, kde-format
@@ -414,7 +414,7 @@ msgstr "Refreŝigi Listo"
 #: contents/ui/MainPage.qml:1588
 #, kde-format
 msgid "Enter Query or Say 'Hey Mycroft'"
-msgstr ""
+msgstr "Enigi Demandon aŭ Diri 'Hej Mycroft'"
 
 #: contents/ui/MsmView.qml:52 contents/ui/MsmView.qml:149
 #: contents/ui/MsmView.qml:165 contents/ui/MsmView.qml:187
@@ -432,62 +432,62 @@ msgstr "Instali"
 #, kde-format
 msgctxt "mtrs stands for meters"
 msgid "Distance: %1 <i>mtrs</i>"
-msgstr ""
+msgstr "Distanco: %1 <i>mtrs</i>"
 
 #: contents/ui/PlacesDelegate.qml:158
 #, kde-format
 msgid "Address: %1"
-msgstr ""
+msgstr "Adreso: %1"
 
 #: contents/ui/PlacesDelegate.qml:212
 #, kde-format
 msgid "<i>Powered By: Here.API</i>"
-msgstr ""
+msgstr "<i>Funkciita de: Ĉi tie.API</i>"
 
 #: contents/ui/PulleyItemDash.qml:116
 #, kde-format
 msgid "Refresh Dashboard"
-msgstr ""
+msgstr "Refreŝigi Instrumentpanelon"
 
 #: contents/ui/PulleyItemDash.qml:129
 #, kde-format
 msgid "Change Settings"
-msgstr ""
+msgstr "Ŝanĝu agordojn"
 
 #: contents/ui/RecipeDelegate.qml:84
 #, kde-format
 msgid "<i>Calories:</i> %1 <b>cal</b>"
-msgstr ""
+msgstr "<i>Kalorioj:</i> %1 <b>kal</b>"
 
 #: contents/ui/RecipeDelegate.qml:95
 #, kde-format
 msgid "<i>Diet Type:</i> %1"
-msgstr ""
+msgstr "<i>Dieto Tipo:</i> %1"
 
 #: contents/ui/RecipeDelegate.qml:106
 #, kde-format
 msgid "<i>Health Tags:</i> %1"
-msgstr ""
+msgstr "<i>Sanaj Etikedoj:</i> %1"
 
 #: contents/ui/RecipeDelegate.qml:115
 #, kde-format
 msgid "View Recipe"
-msgstr ""
+msgstr "Vidi Recepton"
 
 #: contents/ui/RecipeDelegate.qml:139
 #, kde-format
 msgid "<i>Recipe Source: %1</i>"
-msgstr ""
+msgstr "<i>Fonto de la recepto: %1</i>"
 
 #: contents/ui/RecipeDelegate.qml:148
 #, kde-format
 msgid "<i>Powered By: Edamam.com</i>"
-msgstr ""
+msgstr "<i>Funkciita de: Edamam.com</i>"
 
 #: contents/ui/RecipeType.qml:148
 #, kde-format
 msgid "Close Ingredients List"
-msgstr ""
+msgstr "Fermi Liston de Ingrediencoj"
 
 #: contents/ui/StackObjDelegate.qml:77
 #, kde-format
@@ -502,22 +502,22 @@ msgstr "Respondis"
 #: contents/ui/StackObjDelegate.qml:109
 #, kde-format
 msgid "Unanswered"
-msgstr ""
+msgstr "Nerespondita"
 
 #: contents/ui/StackObjDelegate.qml:127
 #, kde-format
 msgid "Replies: %1"
-msgstr ""
+msgstr "Respondoj: %1"
 
 #: contents/ui/StackObjType.qml:49
 #, kde-format
 msgid "Powered By StackOverflow"
-msgstr ""
+msgstr "Funkciigita de StackOverflow"
 
 #: contents/ui/StockPriceWidget.qml:61
 #, kde-format
 msgid "Stock Price Info"
-msgstr ""
+msgstr "Akcia Prezo Informo"
 
 #: contents/ui/StockPriceWidget.qml:80
 #, kde-format
@@ -527,17 +527,17 @@ msgstr "Teksto"
 #: contents/ui/StockPriceWidget.qml:95
 #, kde-format
 msgid "Stock Price:"
-msgstr ""
+msgstr "Akcioprezo:"
 
 #: contents/ui/StockPriceWidget.qml:109
 #, kde-format
 msgid "128.89"
-msgstr ""
+msgstr "128.89"
 
 #: contents/ui/Suggestions.qml:85
 #, kde-format
 msgid "Ask Another"
-msgstr ""
+msgstr "Demandi Alian"
 
 #: contents/ui/Suggestions.qml:226
 #, kde-format
@@ -569,7 +569,7 @@ msgstr "Alta"
 #: contents/ui/TomorrowWeatherType.qml:153
 #, kde-format
 msgid "Tomorrow's Weather"
-msgstr ""
+msgstr "Morgaŭa Vetero"
 
 #: contents/ui/VideoFileDelegate.qml:105
 #, kde-format
@@ -584,17 +584,17 @@ msgstr "Vikipedio"
 #: contents/ui/YelpDelegate.qml:83
 #, kde-format
 msgid "<i>Phone:</i> %1"
-msgstr ""
+msgstr "<i>Telefono:</i> %1"
 
 #: contents/ui/YelpDelegate.qml:96
 #, kde-format
 msgid "<i>Location:</i> %1"
-msgstr ""
+msgstr "<i>Loko:</i> %1"
 
 #: contents/ui/YelpDelegate.qml:108
 #, kde-format
 msgid "<i>Rating:</i> %1 Stars"
-msgstr ""
+msgstr "<i>Taksado:</i> %1 Steloj"
 
 #: contents/ui/YelpDelegate.qml:118
 #, kde-format
@@ -604,9 +604,9 @@ msgstr "Checkout"
 #: contents/ui/YelpDelegate.qml:129
 #, kde-format
 msgid "Send As Text"
-msgstr ""
+msgstr "Sendi Kiel Tekston"
 
 #: contents/ui/YelpDelegate.qml:151
 #, kde-format
 msgid "<i>Powered By: Yelp.com</i>"
-msgstr ""
+msgstr "<i>Fonktita de: Yelp.com</i>"
